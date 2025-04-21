@@ -2474,6 +2474,33 @@ body {
   height: auto;
 }
 
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-in {
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: scale(0.95);
+  }
+
+  to {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+
 .fottersection-newsletter-form .fottersection-input::placeholder {
   color: #6c757d;
 }

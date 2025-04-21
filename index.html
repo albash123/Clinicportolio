@@ -28,7 +28,7 @@
     <div id="preloader">
         <div class="spinner"></div>
     </div>
-    <div class="landingpage ">
+    <header class="landingpage ">
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg ">
             <div class="container-fluid px-3">
@@ -67,7 +67,7 @@
         </nav>
 
         <!-- Hero Section -->
-        <div class="row justify-content-center text-center pt-4">
+        <section class="row justify-content-center text-center pt-4">
             <!-- Logo Shape -->
             <div class="col-12 position-relative " style="height: 200px;">
                 <div class="logo-shape"></div>
@@ -108,8 +108,8 @@
             <div class="col-12 mb-5">
                 <button class="btn btn-light rounded-pill px-5 py-3 fw-medium">Get Started Now</button>
             </div>
-        </div>
-    </div>
+        </section>
+    </header>
 
 
 
@@ -124,7 +124,7 @@
 
     <!--Below part-->
 
-    <div class="mainpart container-fluid py-3 px-5">
+    <main class="mainpart container-fluid py-3 px-5">
         <!-- Company Logos -->
         <div class="container py-5">
             <div class="row justify-content-between align-items-center mb-3 company-logos">
@@ -234,78 +234,16 @@
         </section>
 
         <!-- Animation Observer Script -->
-        <script>
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.3 });
 
-            document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
-        </script>
 
         <!-- Review Rotator -->
         <script>
-            const reviews = [
-                { company: "3Portals", text: "Marketo helped us scale our marketing without long-term contracts. Super effective!" },
-                { company: "Codecraft_", text: "A game-changer for our agency. We finally found flexibility with real ROI." },
-                { company: "Peregrin", text: "Professional, consistent, and creative. Perfect match for our fast-growing startup." },
-                { company: "Quixotic", text: "Seamless onboarding and instant performance—our brand visibility skyrocketed." },
-                { company: "Goodwill", text: "Marketo has become an essential part of our marketing toolkit. Highly recommended!" }
-            ];
 
-            let index = 0;
-            const reviewEl = document.getElementById("company-review");
-            const nameEl = reviewEl.querySelector(".company-name");
-            const textEl = reviewEl.querySelector(".review-text");
-
-            function showNextReview() {
-                const { company, text } = reviews[index];
-                nameEl.textContent = company;
-                textEl.textContent = `"${text}"`;
-                reviewEl.style.display = "block";
-                reviewEl.classList.remove("fade-in");
-                void reviewEl.offsetWidth;
-                reviewEl.classList.add("fade-in");
-                index = (index + 1) % reviews.length;
-            }
-
-            setInterval(showNextReview, 2000);
         </script>
-    </div>
+    </main>
 
     <!-- CSS (add this to your stylesheet or <style> block) -->
-    <style>
-        .animate-on-scroll {
-            opacity: 0;
-            transform: translateY(40px);
-            transition: opacity 1s ease-out, transform 1s ease-out;
-        }
 
-        .animate-on-scroll.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .fade-in {
-            animation: fadeIn 1s ease forwards;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: scale(0.95);
-            }
-
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-    </style>
 
 
     <section class="services-section py-5">
@@ -856,7 +794,7 @@
         </div>
     </section>
     <!--Process Section-->
-    <div class="process-section px-4 px-md-5 py-5">
+    <section class="process-section px-4 px-md-5 py-5">
         <div class="row mb-5">
             <div class="col-12 text-center">
                 <h1 class="process-heading" data-aos="fade-up">Consistent Growth in Just a<br>Simple 3-Steps</h1>
@@ -901,7 +839,7 @@
                 </p>
             </div>
         </div>
-    </div>
+    </section>
 
 
 

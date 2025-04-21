@@ -778,6 +778,64 @@ document.addEventListener("DOMContentLoaded", function () {
       `;
   document.head.appendChild(toastStyles);
 });
+//Animation Observer Script -->
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.3 }
+);
+
+//Review Rotater
+const reviews = [
+  {
+    company: "3Portals",
+    text: "Marketo helped us scale our marketing without long-term contracts. Super effective!",
+  },
+  {
+    company: "Codecraft_",
+    text: "A game-changer for our agency. We finally found flexibility with real ROI.",
+  },
+  {
+    company: "Peregrin",
+    text: "Professional, consistent, and creative. Perfect match for our fast-growing startup.",
+  },
+  {
+    company: "Quixotic",
+    text: "Seamless onboarding and instant performance—our brand visibility skyrocketed.",
+  },
+  {
+    company: "Goodwill",
+    text: "Marketo has become an essential part of our marketing toolkit. Highly recommended!",
+  },
+];
+
+let index = 0;
+const reviewEl = document.getElementById("company-review");
+const nameEl = reviewEl.querySelector(".company-name");
+const textEl = reviewEl.querySelector(".review-text");
+
+function showNextReview() {
+  const { company, text } = reviews[index];
+  nameEl.textContent = company;
+  textEl.textContent = `"${text}"`;
+  reviewEl.style.display = "block";
+  reviewEl.classList.remove("fade-in");
+  void reviewEl.offsetWidth;
+  reviewEl.classList.add("fade-in");
+  index = (index + 1) % reviews.length;
+}
+
+setInterval(showNextReview, 2000);
+
+document
+  .querySelectorAll(".animate-on-scroll")
+  .forEach((el) => observer.observe(el));
 
 document.addEventListener("DOMContentLoaded", function () {
   const newsletterForm = document.getElementById(
