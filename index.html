@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serinica.clinic</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<!-- AOS Script -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+    AOS.init({
+        once: true, // animation only once per element
+        duration: 800,
+        easing: 'ease-in-out',
+    });
+</script>
+
+<body>
+    <!--Landing Page -->
+    <div id="preloader">
+        <div class="spinner"></div>
+    </div>
+    <div class="landingpage ">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg ">
+            <div class="container-fluid px-3">
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <svg class="marketo-logo me-2" viewBox="0 0 50 50" width="40" height="40">
+                        <path d="M25 5L5 20L25 35L45 20L25 5Z" fill="#3B82F6" fill-opacity="0.8"></path>
+                        <path d="M25 15L15 22.5L25 30L35 22.5L25 15Z" fill="#06B6D4" fill-opacity="0.9"></path>
+                    </svg>
+                    <span class="fw-bold fs-4">Serenica</span>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item mx-1">
+                            <a class="nav-link rounded-pill px-4" href="#">Services</a>
+                        </li>
+                        <li class="nav-item mx-1">
+                            <a class="nav-link rounded-pill px-4" href="#">Works</a>
+                        </li>
+                        <li class="nav-item mx-1">
+                            <a class="nav-link rounded-pill px-4" href="#">Pricing</a>
+                        </li>
+                        <li class="nav-item mx-1">
+                            <a class="nav-link rounded-pill px-4" href="#">Contact</a>
+                        </li>
+                    </ul>
+                    <a href="#" class="btn btn-outline-cyan rounded-pill px-4 d-none d-lg-block">Let's Try</a>
+                </div>
+
+                <a href="#" class="btn btn-outline-cyan rounded-pill px-4 d-lg-none">Let's Try</a>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <div class="row justify-content-center text-center pt-4">
+            <!-- Logo Shape -->
+            <div class="col-12 position-relative " style="height: 200px;">
+                <div class="logo-shape"></div>
+            </div>
+
+            <!-- Rating -->
+            <div class=" border_rating col-auto">
+                <div class="rating-badge ">
+                    <div class="avatar-group ">
+                        <div class="avatar bg-warning"></div>
+                        <div class="avatar bg-success"></div>
+                        <div class="avatar bg-danger"></div>
+                    </div>
+                    <i class="fas fa-star text-warning "></i>
+                    <span class="subheading_main">4.8 Rating from 500k+ reviews</span>
+                </div>
+            </div>
+
+            <!-- Headline -->
+            <div class="col-12 heading_main">
+                <h1 class="display-2 fw-bold">
+                    <span class="glow-text">Serinica.clinic</span><br />
+                    <span class="typing-text">Management Made Simple</span>
+                </h1>
+            </div>
+
+
+
+            <!-- Subheading -->
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <p class="lead text-black mb-5">
+                    Say goodbye to one-time marketing campaigns. Get expert, results-driven marketing on a flexible
+                    subscription—no contracts, just growth.
+                </p>
+            </div>
+
+            <!-- CTA Button -->
+            <div class="col-12 mb-5">
+                <button class="btn btn-light rounded-pill px-5 py-3 fw-medium">Get Started Now</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Preloader Script -->
+    <script>
+        window.addEventListener("load", () => {
+            const preloader = document.getElementById("preloader");
+            preloader.classList.add("hidden");
+        });
+    </script>
+
+
+    <!--Below part-->
+
+    <div class="mainpart container-fluid py-3 px-5">
+        <!-- Company Logos -->
+        <div class="container py-5">
+            <div class="row justify-content-between align-items-center mb-3 company-logos">
+                <div class="col-6 col-md-2 mb-4 mb-md-0 animate-on-scroll" style="transition-delay: 0.1s;">
+                    <div class="logo-item">
+                        <svg viewBox="0 0 40 40" width="40" height="40">
+                            <path
+                                d="M10,8 L18,8 C20.7614,8 23,10.2386 23,13 L23,21 C23,23.7614 20.7614,26 18,26 L10,26 C7.23858,26 5,23.7614 5,21 L5,13 C5,10.2386 7.23858,8 10,8 Z"
+                                fill="#6366F1"></path>
+                            <path
+                                d="M20,14 L28,14 C30.7614,14 33,16.2386 33,19 L33,27 C33,29.7614 30.7614,32 28,32 L20,32 C17.2386,32 15,29.7614 15,27 L15,19 C15,16.2386 17.2386,14 20,14 Z"
+                                fill="#818CF8" fill-opacity="0.8"></path>
+                        </svg>
+                        <span class="logo-text">3Portals</span>
+                    </div>
+                </div>
+                <div class="col-6 col-md-2 mb-4 mb-md-0 animate-on-scroll" style="transition-delay: 0.2s;">
+                    <div class="logo-item">
+                        <svg viewBox="0 0 40 40" width="40" height="40">
+                            <rect x="8" y="8" width="24" height="24" rx="4" fill="#333333"></rect>
+                            <path d="M20,20 L28,20 L28,28 L20,28 Z" fill="#FFFFFF"></path>
+                        </svg>
+                        <span class="logo-text">Codecraft_</span>
+                    </div>
+                </div>
+                <div class="col-6 col-md-2 mb-4 mb-md-0 animate-on-scroll" style="transition-delay: 0.3s;">
+                    <div class="logo-item">
+                        <svg viewBox="0 0 40 40" width="40" height="40">
+                            <path d="M8,20 C8,13.3726 13.3726,8 20,8 C26.6274,8 32,13.3726 32,20 L8,20 Z"
+                                fill="#10B981"></path>
+                            <path d="M32,20 C32,26.6274 26.6274,32 20,32 C13.3726,32 8,26.6274 8,20 L32,20 Z"
+                                fill="#10B981" fill-opacity="0.5"></path>
+                        </svg>
+                        <span class="logo-text">Peregrin</span>
+                    </div>
+                </div>
+                <div class="col-6 col-md-2 mb-4 mb-md-0 animate-on-scroll" style="transition-delay: 0.4s;">
+                    <div class="logo-item">
+                        <svg viewBox="0 0 40 40" width="40" height="40">
+                            <circle cx="20" cy="20" r="12" fill="#A855F7"></circle>
+                            <path d="M20,14 L26,20 L20,26 L14,20 Z" fill="#FFFFFF"></path>
+                        </svg>
+                        <span class="logo-text">Quixotic</span>
+                    </div>
+                </div>
+                <div class="col-6 col-md-2 mb-4 mb-md-0 animate-on-scroll" style="transition-delay: 0.5s;">
+                    <div class="logo-item">
+                        <svg viewBox="0 0 40 40" width="40" height="40">
+                            <circle cx="20" cy="20" r="12" stroke="#059669" stroke-width="2" fill="none"></circle>
+                            <path d="M14,20 L18,24 L26,16" stroke="#059669" stroke-width="2" fill="none"></path>
+                        </svg>
+                        <span class="logo-text">Goodwill</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Review Card -->
+            <div id="company-review" class="review-card animate-on-scroll text-center p-4 rounded shadow-lg mx-auto"
+                style="max-width: 600px; display: none;">
+                <h5 class="company-name fw-bold"></h5>
+                <p class="review-text mb-0 fst-italic"></p>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <section class="maincontent_scen">
+            <div class="row align-items-center pt-4">
+                <!-- Left Column - Text -->
+                <div class="col-lg-6 mb-5 mb-lg-0">
+
+
+                    <h1 class="highlighted_text display-3 fw-bold mb-4 animate-on-scroll">Marketing Made Simple, Results
+                        Made Predictable
+                    </h1>
+
+
+                    <p class="lead text-secondary mb-5 animate-on-scroll">
+                        Traditional marketing is expensive and unpredictable. We believe businesses deserve consistent,
+                        expert marketing without high costs or long-term contracts.
+                    </p>
+
+                    <a href="#" class="btn btn-outline-dark rounded-pill px-5 py-3 animate-on-scroll">Get Start Now</a>
+
+                </div>
+
+                <!-- Right Column - Image Section -->
+                <div class="col-lg-6 position-relative animate-on-scroll">
+                    <!-- Blue Circle with Arrow -->
+                    <div class="blue-circle">
+                        <i class="fas fa-arrow-trend-up"></i>
+                    </div>
+
+                    <!-- User Avatars -->
+                    <div class="user-avatars">
+                        <div class="avatar" style="background-color: #10B981;"></div>
+                        <div class="avatar" style="background-color: #A855F7;"></div>
+                        <div class="avatar" style="background-color: #F59E0B;"></div>
+                    </div>
+
+                    <!-- Main Image -->
+                    <div class="main-image-container">
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-ffLO9V0Nl1TKOEbmQ68MjNZj3FMhJb.png"
+                            alt="Marketing professionals working together" class="img-fluid rounded-4 main-image">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Animation Observer Script -->
+        <script>
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.3 });
+
+            document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+        </script>
+
+        <!-- Review Rotator -->
+        <script>
+            const reviews = [
+                { company: "3Portals", text: "Marketo helped us scale our marketing without long-term contracts. Super effective!" },
+                { company: "Codecraft_", text: "A game-changer for our agency. We finally found flexibility with real ROI." },
+                { company: "Peregrin", text: "Professional, consistent, and creative. Perfect match for our fast-growing startup." },
+                { company: "Quixotic", text: "Seamless onboarding and instant performance—our brand visibility skyrocketed." },
+                { company: "Goodwill", text: "Marketo has become an essential part of our marketing toolkit. Highly recommended!" }
+            ];
+
+            let index = 0;
+            const reviewEl = document.getElementById("company-review");
+            const nameEl = reviewEl.querySelector(".company-name");
+            const textEl = reviewEl.querySelector(".review-text");
+
+            function showNextReview() {
+                const { company, text } = reviews[index];
+                nameEl.textContent = company;
+                textEl.textContent = `"${text}"`;
+                reviewEl.style.display = "block";
+                reviewEl.classList.remove("fade-in");
+                void reviewEl.offsetWidth;
+                reviewEl.classList.add("fade-in");
+                index = (index + 1) % reviews.length;
+            }
+
+            setInterval(showNextReview, 2000);
+        </script>
+    </div>
+
+    <!-- CSS (add this to your stylesheet or <style> block) -->
+    <style>
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
+
+
+    <section class="services-section py-5">
+        <div class="container py-4">
+            <!-- Section Header -->
+            <div class="row text-center mb-5" data-aos="fade-up">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="display-4 fw-bold mb-4 our-services-heading">Our Services</h2>
+                    <p class="lead text-secondary">
+                        You're an e-commerce brand, local business, tech startup, or consultant — we handle your
+                        marketing so you can focus on growth.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Services Content -->
+            <div class="row align-items-center">
+                <!-- Left Column - Image with Floating Elements -->
+                <div class="col-lg-6 mb-5 mb-lg-0 position-relative" data-aos="zoom-in">
+                    <div class="services-image-container overflow-hidden">
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-9pwkXczioC4K5oibZHRf9si6UPzoKq.png"
+                            alt="Marketing professional working" class="img-fluid">
+                    </div>
+
+                    <div class="services-rocket-icon">
+                        <div class="services-icon-inner">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                    </div>
+
+                    <div class="services-growth-chart">
+                        <div class="services-chart-content">
+                            <div class="services-percentage">+70%</div>
+                            <div class="services-chart-image">
+                                <svg viewBox="0 0 100 50" width="100%" height="40">
+                                    <polyline points="0,35 15,25 30,30 45,15 60,25 75,10 90,5" fill="none"
+                                        stroke="#22d3ee" stroke-width="2"></polyline>
+                                    <polyline points="0,35 15,25 30,30 45,15 60,25 75,10 90,5" fill="none"
+                                        stroke="rgba(34, 211, 238, 0.3)" stroke-width="8" stroke-linecap="round"
+                                        stroke-linejoin="round"></polyline>
+                                </svg>
+                            </div>
+                            <div class="services-grow-text">GROW UP</div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <!-- Right Column - Services List -->
+                <div class="col-lg-6">
+                    <div class="row g-4">
+                        <!-- Service Item 1 -->
+                        <div class="col-12" data-aos="fade-right" data-aos-delay="100">
+                            <div class="services-card">
+
+                                <div class="services-icon">
+                                    <i class="fas fa-search"></i>
+                                </div>
+
+                                <div class="services-content">
+                                    <h3 class="services-title">SEO Optimization & Content</h3>
+                                    <p class="services-description">Improve your search rankings and generate consistent
+                                        traffic through optimized, high-quality content.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Service Item 2 -->
+                        <div class="col-12" data-aos="fade-right" data-aos-delay="200">
+                            <div class="services-card">
+                                <div class="services-icon">
+                                    <i class="fas fa-link"></i>
+                                </div>
+                                <div class="services-content">
+                                    <h3 class="services-title">Branding & Strategy</h3>
+                                    <p class="services-description">We help you craft a unique brand identity and
+                                        long-term strategy to stand out in the market.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Service Item 3 -->
+                        <div class="col-12" data-aos="fade-right" data-aos-delay="300">
+                            <div class="services-card">
+                                <div class="services-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="services-content">
+                                    <h3 class="services-title">Email Marketing & Automation</h3>
+                                    <p class="services-description">Build relationships and increase conversions with
+                                        personalized email marketing campaigns.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Service Item 4 -->
+                        <div class="col-12" data-aos="fade-right" data-aos-delay="400">
+                            <div class="services-card">
+                                <div class="services-icon">
+                                    <i class="fas fa-bullhorn"></i>
+                                </div>
+                                <div class="services-content">
+                                    <h3 class="services-title">Paid Advertising (Google & Social Ads)</h3>
+                                    <p class="services-description">Maximize ROI through high-performing ad campaigns on
+                                        Google, Facebook, Instagram, and more.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-in-out',
+            once: true
+        });
+    </script>
+
+
+    <!-- Carousel -->
+    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <!-- Indicators -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+        </div>
+
+        <!-- Slides -->
+        <div class="carousel-inner">
+
+            <!-- Slide 1 -->
+            <div class="carousel-item active" data-bs-interval="10000">
+                <section class="works-section py-5">
+                    <div class="container py-4">
+                        <!-- Header -->
+                        <div class="row text-center mb-5">
+                            <div class="col-lg-8 mx-auto">
+                                <h2 class="custom-heading display-4 fw-bold mb-4">Our Work</h2>
+
+                                <p class="lead text-secondary">See how we've helped businesses like yours overcome
+                                    challenges, improve engagement, and boost sales.</p>
+                            </div>
+                        </div>
+
+                        <!-- Case Study -->
+                        <div class="row align-items-center">
+                            <!-- Left Column -->
+                            <div class="col-lg-4 mb-4 mb-lg-0">
+                                <div class="d-flex align-items-center mb-4">
+                                    <div class="works-company-logo me-3">
+                                        <svg viewBox="0 0 40 40" width="40" height="40">
+                                            <circle cx="20" cy="20" r="15" fill="#A855F7"></circle>
+                                            <path d="M20,12 L28,20 L20,28 L12,20 Z" fill="#FFFFFF"></path>
+                                        </svg>
+                                    </div>
+                                    <h3 class="works-company-name mb-0">Quixotic</h3>
+                                </div>
+
+                                <div class="works-industry-tag mb-4">eCommerce industry</div>
+
+                                <div class="works-case-study-section mb-4">
+                                    <h5>Challenge:</h5>
+                                    <p>What issue they faced before using your service.</p>
+                                </div>
+                                <div class="works-case-study-section">
+                                    <h5>Solution:</h5>
+                                    <p>How your service helped them (e.g., email automation, retention boost)</p>
+                                </div>
+                            </div>
+
+                            <!-- Middle Column -->
+                            <div class="col-lg-4 mb-4 mb-lg-0">
+                                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-PC3OO4L2hl1DM2lPjfveW370Gc6xUO.png"
+                                    alt="Analytics dashboard" class="img-fluid rounded-4">
+                            </div>
+
+                            <!-- Right Column -->
+                            <div class="col-lg-4">
+                                <div class="works-avatar-group mb-3">
+                                    <div class="works-avatar"
+                                        style="background-image: url('https://randomuser.me/api/portraits/men/32.jpg');">
+                                    </div>
+                                    <div class="works-avatar works-arrow-avatar"><i class="fas fa-arrow-right"></i>
+                                    </div>
+                                    <div class="works-avatar"
+                                        style="background-image: url('https://randomuser.me/api/portraits/men/33.jpg');">
+                                    </div>
+                                </div>
+
+                                <div class="works-results-percentage mb-3">
+                                    <h2 class="works-percentage">60%</h2>
+                                    <p>increase in<br>subscriber retention</p>
+                                </div>
+
+                                <div class="works-testimonial-card">
+                                    <p>"We saw a 60% increase in subscriber retention within just 3 months! The
+                                        automated email flows and targeted campaigns were a game-changer for our
+                                        business."</p>
+                                    <div class="d-flex align-items-center mt-3">
+                                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Teli samad"
+                                            class="rounded-circle me-3" width="50">
+                                        <div>
+                                            <h6 class="mb-0">Teli Samad</h6>
+                                            <small>CEO of Quixotic</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item" data-bs-interval="7000">
+                <section class="works-section py-5">
+                    <div class="container py-4">
+                        <div class="row text-center mb-5">
+                            <div class="col-lg-8 mx-auto">
+                                <h2 class="display-4 fw-bold mb-4">Our Work</h2>
+                                <p class="lead text-secondary">We work with companies across industries to build
+                                    measurable growth.</p>
+                            </div>
+                        </div>
+
+                        <div class="row align-items-center">
+                            <!-- Left -->
+                            <div class="col-lg-4">
+                                <svg width="100" height="60" viewBox="0 0 100 60" fill="none">
+                                    <rect x="10" y="10" width="20" height="20" fill="#6366F1" opacity="0.8" />
+                                    <rect x="35" y="10" width="20" height="20" fill="#6366F1" opacity="0.6" />
+                                    <rect x="60" y="10" width="20" height="20" fill="#6366F1" opacity="0.4" />
+                                    <rect x="10" y="35" width="20" height="20" fill="#6366F1" opacity="0.7" />
+                                    <rect x="35" y="35" width="20" height="20" fill="#6366F1" opacity="0.5" />
+                                </svg>
+                                <h4 class="mt-3">3Portals</h4>
+                                <p class="text-muted">Real Estate industry</p>
+
+                                <h5 class="mt-4">Challenge:</h5>
+                                <p>They were struggling with cold leads and poor conversion rates.</p>
+                                <h5>Solution:</h5>
+                                <p>We implemented targeted PPC ads and email nurturing flows to re-engage them.</p>
+                            </div>
+
+                            <!-- Middle -->
+                            <div class="col-lg-4">
+                                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-XVWSrFlyVShKxZ2KYxxp0dnau0pJu4.png"
+                                    alt="Client image" class="img-fluid rounded-4">
+                            </div>
+
+                            <!-- Right -->
+                            <div class="col-lg-4">
+                                <div class="works-avatar-group mb-3">
+                                    <img src="https://randomuser.me/api/portraits/men/50.jpg" class="rounded-circle"
+                                        width="50">
+                                    <img src="https://randomuser.me/api/portraits/men/51.jpg" class="rounded-circle"
+                                        width="50">
+                                    <img src="https://randomuser.me/api/portraits/men/52.jpg" class="rounded-circle"
+                                        width="50">
+                                </div>
+                                <div class="works-results-percentage mb-3">
+                                    <h2 class="works-percentage">70%</h2>
+                                    <p>increase in<br>subscriber retention</p>
+                                </div>
+
+                                <div class="works-testimonial-card">
+                                    <p>"Our lead generation skyrocketed by 75% in just 2 months! The PPC campaigns and
+                                        SEO strategies helped us attract high-quality leads effortlessly."</p>
+                                    <div class="d-flex align-items-center mt-3">
+                                        <img src="https://randomuser.me/api/portraits/men/60.jpg" alt="John Duo"
+                                            class="rounded-circle me-3" width="50">
+                                        <div>
+                                            <h6 class="mb-0">John Duo</h6>
+                                            <small>CEO of 3Portals</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+
+
+
+
+    <!--Why buinesses choose us section-->
+
+
+    <section class="business-subscription-section py-5">
+        <div class="container py-4">
+            <!-- Section Header -->
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class=" custom-heading display-4 fw-bold mb-4">Why Businesses Trust Our Subscription Model</h2>
+                    <p class="leading-part-text">
+                        We don't just run campaigns—we create long-term growth strategies that adapt to your business
+                        needs.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Content Row -->
+            <div class="row align-items-center">
+                <!-- Left Column - Visual Element -->
+                <div class="box col-lg-5 mb-5 mb-lg-0">
+                    <div class="business-visual-element position-relative">
+
+                        <!-- Logo Shape -->
+                        <div class="business-logo-shape animate-pulse"></div>
+
+                        <!-- Row 1 -->
+                        <div class="business-team-member-row d-flex align-items-center mb-4 animate-slide-left">
+                            <div class="business-team-member animate-float">
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Team member"
+                                    class="img-fluid rounded-circle">
+                            </div>
+                            <div class="business-feature-bar business-email-bar animate-pop">
+                                <div class="business-icon-circle">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Row 2 -->
+                        <div class="business-team-member-row d-flex align-items-center mb-4 animate-slide-right">
+                            <div class="business-feature-bar business-analytics-bar animate-pop delay-1">
+                                <div class="business-icon-circle">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                            </div>
+                            <div class="business-team-member animate-float delay-1">
+                                <img src="https://randomuser.me/api/portraits/men/33.jpg" alt="Team member"
+                                    class="img-fluid rounded-circle">
+                            </div>
+                        </div>
+
+                        <!-- Row 3 -->
+                        <div class="business-team-member-row d-flex align-items-center animate-slide-left">
+                            <div class="business-team-member animate-float delay-2">
+                                <img src="https://randomuser.me/api/portraits/men/34.jpg" alt="Team member"
+                                    class="img-fluid rounded-circle">
+                            </div>
+                            <div class="business-feature-bar business-integration-bar animate-pop delay-2">
+                                <div class="business-icon-circle">
+                                    <i class="fas fa-plug"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Right Column - Feature Cards -->
+                <div class="col-lg-7">
+                    <div class="row g-4">
+                        <!-- Feature Card 1 -->
+                        <div class="col-md-6 animate-feature delay-0">
+
+                            <div class="business-feature-card">
+                                <div class="business-icon-wrapper business-light-blue animate-icon">
+                                    <i class="fas fa-robot"></i>
+                                </div>
+                                <h3 class="business-feature-title">AI-driven email & SMS campaigns</h3>
+                            </div>
+
+                        </div>
+
+                        <!-- Feature Card 2 -->
+                        <div class="col-md-6 animate-feature delay-1">
+                            <div class="business-feature-card">
+                                <div class="business-icon-wrapper business-light-purple animate-icon">
+                                    <i class="fas fa-users-cog"></i>
+                                </div>
+                                <h3 class="business-feature-title">Segmentation & personalization</h3>
+                            </div>
+                        </div>
+
+                        <!-- Feature Card 3 -->
+                        <div class="col-md-6 animate-feature delay-2">
+                            <div class="business-feature-card">
+                                <div class="business-icon-wrapper business-light-indigo animate-icon">
+                                    <i class="fas fa-chart-bar"></i>
+                                </div>
+                                <h3 class="business-feature-title">Performance analytics & insights</h3>
+                            </div>
+                        </div>
+
+                        <!-- Feature Card 4 -->
+                        <div class="col-md-6 animate-feature delay-3">
+                            <div class="business-feature-card">
+                                <div class="business-icon-wrapper business-light-yellow animate-icon">
+                                    <i class="fas fa-link"></i>
+                                </div>
+                                <h3 class="business-feature-title">Seamless integrations</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="pricingsection-section py-5">
+        <div class="container py-4">
+            <!-- Section Header -->
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class=" pricing_head display-4 fw-bold mb-3">Transparent Pricing</h2>
+                    <p class="lead text-secondary">
+                        Our subscription-based marketing plans give you ongoing expert marketing at a predictable
+                        monthly cost so your business gets continuous
+                    </p>
+                </div>
+            </div>
+
+            <!-- Pricing Toggle -->
+            <div class="row justify-content-center mb-5">
+                <div class="col-md-4 col-lg-3">
+                    <div class="pricingsection-toggle d-flex justify-content-between align-items-center">
+                        <span class="pricingsection-toggle-option active">Monthly</span>
+                        <label class="pricingsection-switch mx-3">
+                            <input type="checkbox" id="pricingToggle">
+                            <span class="pricingsection-slider round"></span>
+                        </label>
+                        <span class="pricingsection-toggle-option">Yearly</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pricing Cards -->
+            <div class="row g-4">
+                <!-- Starter Plan -->
+                <div class="col-md-4">
+                    <div class="pricingsection-card pricingsection-starter-card">
+                        <div class="card-body">
+                            <h3 class="pricingsection-plan-name">Starter Plan</h3>
+                            <div class="pricingsection-price-container">
+                                <h2 class="pricingsection-price">$299<span class="pricingsection-period">/mo</span></h2>
+                            </div>
+                            <p class="pricingsection-audience">Small businesses or startups</p>
+
+                            <div class="pricingsection-plan-icon pricingsection-starter-icon">
+                                <svg viewBox="0 0 60 40" width="60" height="40">
+                                    <rect x="10" y="10" width="15" height="20" fill="#2563EB" />
+                                    <rect x="35" y="10" width="15" height="20" fill="#2563EB" />
+                                </svg>
+                            </div>
+
+                            <ul class="pricingsection-feature-list">
+                                <li><i class="fas fa-check-circle"></i> Social media management</li>
+                                <li><i class="fas fa-check-circle"></i> Basic SEO optimization</li>
+                                <li><i class="fas fa-check-circle"></i> Email marketing (2 campaigns/month)</li>
+                                <li><i class="fas fa-check-circle"></i> Monthly analytics report</li>
+                                <li><i class="fas fa-check-circle"></i> Advanced marketing strategies</li>
+                            </ul>
+
+                            <a href="#" class="btn btn-dark w-100 py-3 rounded-pill">Get Start Now</a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- Growth Plan -->
+                <div class="col-md-4">
+                    <div class="pricingsection-card pricingsection-growth-card">
+                        <div class="card-body">
+                            <h3 class="pricingsection-plan-name">Growth Plan</h3>
+                            <div class="pricingsection-price-container">
+                                <h2 class="pricingsection-price">$349<span class="pricingsection-period">/mo</span></h2>
+                            </div>
+                            <p class="pricingsection-audience">Small businesses or Growths</p>
+
+                            <div class="pricingsection-plan-icon pricingsection-growth-icon">
+                                <svg viewBox="0 0 60 40" width="60" height="40">
+                                    <rect x="10" y="10" width="15" height="20" fill="#4F46E5" />
+                                    <rect x="35" y="10" width="15" height="20" fill="#4F46E5" />
+                                </svg>
+                            </div>
+
+                            <ul class="pricingsection-feature-list">
+                                <li><i class="fas fa-check-circle"></i> Social media management</li>
+                                <li><i class="fas fa-check-circle"></i> Paid advertising (Google & social ads)</li>
+                                <li><i class="fas fa-check-circle"></i> Lead generation strategy</li>
+                                <li><i class="fas fa-check-circle"></i> Content marketing (blogs)</li>
+                                <li><i class="fas fa-check-circle"></i> Conversion rate optimization</li>
+                            </ul>
+
+                            <a href="#" class="btn btn-dark w-100 py-3 rounded-pill">Get Start Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Premium Plan -->
+                <div class="col-md-4">
+                    <div class="pricingsection-card pricingsection-premium-card">
+                        <div class="card-body">
+                            <h3 class="pricingsection-plan-name pricingsection-premium-title">Premium Plan</h3>
+                            <div class="pricingsection-price-container">
+                                <h2 class="pricingsection-price pricingsection-premium-price">$469<span
+                                        class="pricingsection-period">/mo</span></h2>
+                            </div>
+                            <p class="pricingsection-audience pricingsection-premium-text">Small businesses or Growths
+                            </p>
+
+                            <div class="pricingsection-plan-icon pricingsection-premium-icon">
+                                <svg viewBox="0 0 60 40" width="60" height="40">
+                                    <path d="M30,5 L10,20 L20,20 L20,35 L40,35 L40,20 L50,20 Z" fill="#22D3EE" />
+                                </svg>
+                            </div>
+
+                            <ul class="pricingsection-feature-list pricingsection-premium-list">
+                                <li><i class="fas fa-check-circle"></i> Social media management</li>
+                                <li><i class="fas fa-check-circle"></i> Advanced SEO & competitor analysis</li>
+                                <li><i class="fas fa-check-circle"></i> Custom marketing strategy</li>
+                                <li><i class="fas fa-check-circle"></i> Content marketing (blogs)</li>
+                                <li><i class="fas fa-check-circle"></i> Dedicated account manager</li>
+                            </ul>
+
+                            <a href="#" class="btn btn-light w-100 py-3 rounded-pill">Get Start Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Process Section-->
+    <div class="process-section px-4 px-md-5 py-5">
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <h1 class="process-heading" data-aos="fade-up">Consistent Growth in Just a<br>Simple 3-Steps</h1>
+                <p class="process-subheading" data-aos="fade-up" data-aos-delay="200">
+                    We follow a structured, data-driven process to ensure your marketing strategy delivers consistent
+                    growth and measurable results.
+                </p>
+            </div>
+        </div>
+
+        <div class="row justify-content-center text-center">
+            <!-- Step 1 -->
+            <div class="col-md-4 mb-4 process-step" data-aos="fade-up" data-aos-delay="300">
+                <div class="process-number-shadow">
+                    <span class="process-number glow">1</span>
+                </div>
+                <h3 class="process-title">Onboarding Strategy</h3>
+                <p class="process-description">
+                    We start with an in-depth consultation to understand your goals, target audience.
+                </p>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="col-md-4 mb-4 process-step" data-aos="fade-up" data-aos-delay="500">
+                <div class="process-number-shadow">
+                    <span class="process-number process-number-2 glow">2</span>
+                </div>
+                <h3 class="process-title">Optimization Tracking</h3>
+                <p class="process-description">
+                    In-depth consultation to understand your goals, target audience, and business needs.
+                </p>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="col-md-4 mb-4 process-step" data-aos="fade-up" data-aos-delay="700">
+                <div class="process-number-shadow">
+                    <span class="process-number process-number-3 glow">3</span>
+                </div>
+                <h3 class="process-title">Strategy Adjustments</h3>
+                <p class="process-description">
+                    Consultation to understand your goals, target audience, and business needs.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!--Contact section-->
+
+    <section class="contact-section py-5" data-aos="fade-up">
+        <div class="container py-4">
+            <div class="row text-center mb-5" data-aos="zoom-in">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class=" heading_grow contact-display-4 fw-bold">Let's Grow Your Business – Talk to Us!</h2>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-5 mb-5 mb-lg-0" data-aos="fade-right">
+                    <h3 class="contact-heading mb-4">Contact us</h3>
+
+                    <div class="contact-item d-flex align-items-center mb-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-info">
+                            <h4 class="contact-info-title">Call us</h4>
+                            <p class="contact-info-detail">+44 325 5687 35</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item d-flex align-items-center mb-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-info">
+                            <h4 class="contact-info-title">Email</h4>
+                            <p class="contact-info-detail">marketo@info.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item d-flex align-items-center" data-aos="fade-up" data-aos-delay="300">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-info">
+                            <h4 class="contact-info-title">Based in</h4>
+                            <p class="contact-info-detail mb-0">4140 Parker Rd. Allentown,</p>
+                            <p class="contact-info-detail">New Mexico</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-7" data-aos="fade-left">
+                    <div class="contact-form-container">
+                        <form id="contactForm">
+                            <h3 class="contact-form-heading mb-4">Get in touch</h3>
+
+                            <div class="mb-3">
+                                <label for="fullName" class="contact-form-label">Full Name*</label>
+                                <input type="text" class="contact-form-control form-control" id="fullName"
+                                    placeholder="Jacob" required />
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="email" class="contact-form-label">Email Address*</label>
+                                <input type="email" class="contact-form-control form-control" id="email"
+                                    placeholder="example@email.com" required />
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="message" class="contact-form-label">Message*</label>
+                                <textarea class="contact-form-control form-control" id="message" rows="5"
+                                    placeholder="Message" required></textarea>
+                            </div>
+
+                            <div class="mb-4 form-check contact-form-check">
+                                <input type="checkbox" class="contact-form-check-input form-check-input"
+                                    id="privacyPolicy" required />
+                                <label class="contact-form-check-label form-check-label" for="privacyPolicy">
+                                    I have read and accepted the <a href="#" class="contact-privacy-link">Privacy
+                                        Policy</a>
+                                </label>
+                            </div>
+
+                            <button type="submit" class="btn_submit contact-btn-submit">Submit Now</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- FAQ Section -->
+
+    <!-- FAQ Section -->
+    <section class="faq-section py-5" data-aos="fade-up">
+        <div class="container py-4">
+            <div class="row">
+                <!-- Left Column -->
+                <div class="col-lg-5 mb-4 mb-lg-0" data-aos="fade-up">
+                    <div class="faq-header">
+                        <h2 class="faq-title mb-4">Answers to Your Top Questions</h2>
+                        <p class="faq-description">
+                            Check out our frequently asked questions to learn more about our process, services, and what
+                            to expect.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Right Column -->
+                <div class="col-lg-7" data-aos="fade-up">
+                    <div class="accordion" id="faqAccordion">
+                        <!-- FAQ Item 1 -->
+                        <div class="accordion-item" data-aos="fade-up">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    What services do you offer?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    We offer a full range of digital marketing, development, and branding services to
+                                    help grow your business online.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 2 -->
+                        <div class="accordion-item" data-aos="fade-up">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    How can I get started?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Simply reach out through our contact form or call us directly. We'll guide you
+                                    through every step.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 3 -->
+                        <div class="accordion-item" data-aos="fade-up">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Do you work with international clients?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes, we proudly work with clients from around the globe to deliver top-tier digital
+                                    solutions.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 4 -->
+                        <div class="accordion-item" data-aos="fade-up">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    What is your pricing structure?
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Our pricing depends on your specific needs and goals. We provide custom quotes after
+                                    a free consultation.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 5 -->
+                        <div class="accordion-item" data-aos="fade-up">
+                            <h2 class="accordion-header" id="headingFive">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    How long does a project usually take?
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Project duration depends on scope, but we strive to deliver efficiently without
+                                    compromising quality.
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="fottersection-wrapper" data-aos="fade-up">
+        <div class="fottersection-container container py-5">
+            <div class="fottersection-row row gy-4">
+
+                <!-- Newsletter -->
+                <div class="fottersection-col col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="fottersection-widget">
+                        <h4 class="fottersection-widget-title">Newsletter</h4>
+                        <p class="fottersection-newsletter-text">Keep up our latest update. Subscribe to our newsletter.
+                        </p>
+                        <form id="fottersection-newsletterForm">
+                            <div class="fottersection-input-group input-group">
+                                <input type="email" class="form-control fottersection-input" placeholder="Email Address"
+                                    required>
+                                <button type="submit" class="btn fottersection-submit-btn">Submit Now</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Company Links -->
+                <div class="fottersection-col col-lg-2 col-md-6 offset-lg-1" data-aos="fade-up" data-aos-delay="200">
+                    <div class="fottersection-widget">
+                        <h4 class="fottersection-widget-title">Company</h4>
+                        <ul class="fottersection-links">
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Service</a></li>
+                            <li><a href="#">Our Works</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Utility Pages -->
+                <div class="fottersection-col col-lg-2 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="fottersection-widget">
+                        <h4 class="fottersection-widget-title">Utility Pages</h4>
+                        <ul class="fottersection-links">
+                            <li><a href="#">Licenses</a></li>
+                            <li><a href="#">Changelog</a></li>
+                            <li><a href="#">Style Guide</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Social Media -->
+                <div class="fottersection-col col-lg-2 col-md-6 offset-lg-1" data-aos="fade-up" data-aos-delay="400">
+                    <div class="fottersection-widget">
+                        <h4 class="fottersection-widget-title">Social Media</h4>
+                        <ul class="fottersection-links fottersection-social-links">
+                            <li><a href="#"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+                            <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                            <li><a href="#"><i class="fab fa-linkedin-in"></i> LinkedIn</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="fottersection-bottom text-center py-4" data-aos="fade-up" data-aos-delay="500">
+            <div class="fottersection-logo mb-2">
+                <svg viewBox="0 0 100 80" width="80" height="60">
+                    <path d="M20,20 L40,40 L60,20 L80,40 L60,60 L40,40 L20,60 L0,40 Z" fill="#22D3EE" />
+                    <path d="M20,20 L40,40 L20,60 L0,40 Z" fill="#3B82F6" />
+                    <path d="M60,20 L80,40 L60,60 L40,40 Z" fill="#4F46E5" />
+                </svg>
+                <h2 class="fottersection-logo-text">Marketo</h2>
+            </div>
+            <p class="fottersection-copyright">
+                © 2025 Marketo. Proudly created with <a href="#" class="fottersection-link">Grabui Library</a>
+            </p>
+        </div>
+    </footer>
+
+
+
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+
+</html>
