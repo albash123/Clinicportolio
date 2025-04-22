@@ -779,8 +779,6 @@ document.addEventListener("DOMContentLoaded", function () {
   document.head.appendChild(toastStyles);
 });
 
-
-
 let index = 0;
 const reviewEl = document.getElementById("company-review");
 const nameEl = reviewEl.querySelector(".company-name");
