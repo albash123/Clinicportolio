@@ -875,3 +875,40 @@ document.addEventListener("DOMContentLoaded", function () {
     toastEl.addEventListener("hidden.bs.toast", () => toastEl.remove());
   }
 });
+
+(() => {
+  const topBtn = document.getElementById("backTop");
+  if (!topBtn) return;
+
+  window.addEventListener("scroll", () => {
+    topBtn.classList.toggle("d-none", window.scrollY < 400);
+  });
+
+  topBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+})();
+
+(() => {
+  // 1. split into individual characters (and keep spaces intact)
+  const split = new SplitType(".hero-title", { types: "chars" });
+
+  // 2. register ScrollTrigger
+  gsap.registerPlugin(ScrollTrigger);
+
+  // 3. animation timeline
+  gsap.from(split.chars, {
+    y: 120, // rise up
+    rotateX: -90, // flip from back‑face
+    opacity: 0,
+    transformOrigin: "50% 100%",
+    ease: "back.out(1.7)",
+    stagger: 0.04, // delay between characters
+    duration: 1.1,
+    scrollTrigger: {
+      trigger: ".hero-title",
+      start: "top 80%", // adjusts when the animation begins
+      once: true, // play only the first time
+    },
+  });
+})();

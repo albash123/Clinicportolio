@@ -2898,3 +2898,61 @@ body {
     height: 30px;
   }
 }
+/* ----------  floating icons  ---------- */
+.floating‑icons {
+  position: fixed; /* the magic */
+  right: 1.25rem; /* distance from viewport edge  (20 px)   */
+  bottom: 1.25rem; /* can change to top: if you prefer        */
+  display: flex;
+  flex-direction: column; /* stack vertically                         */
+  gap: 0.75rem; /* space between buttons                    */
+  z-index: 1055; /* above navbar / modals                    */
+}
+/* so 3‑D rotations have depth */
+.hero-title{ perspective:800px; }
+
+/* optional fancy gradient fill */
+@media(prefers-color-scheme:dark){
+  .hero-title{ background:linear-gradient(90deg,#22d3ee,#4f46e5,#a855f7);
+               -webkit-background-clip:text;
+               color:transparent; }
+}
+
+
+.fi-btn {
+  --size: 48px; /* easy tweak */
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 1.25rem;
+  color: #fff;
+  background: var(--brand-cyan, #22d3ee); /* uses your token if present */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  transition: transform 0.15s ease, background.15s ease;
+}
+.fi-btn:hover {
+  transform: scale(1.08);
+}
+
+.fi-btn i {
+  pointer-events: none;
+} /* icon not clickable separately */
+
+/* dark‑mode override (if you used the recipe earlier) */
+:root.dark .fi-btn {
+  background: var(--brand-purple, #a855f7);
+}
+
+/* optional: hide on very small screens */
+@media (max-width: 390px) {
+  .floating‑icons {
+    right: 0.5rem;
+    bottom: 0.5rem;
+  }
+  .fi-btn {
+    --size: 40px;
+    font-size: 1.1rem;
+  }
+}
