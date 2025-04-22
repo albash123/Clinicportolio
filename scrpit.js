@@ -778,42 +778,8 @@ document.addEventListener("DOMContentLoaded", function () {
       `;
   document.head.appendChild(toastStyles);
 });
-//Animation Observer Script -->
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-        observer.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.3 }
-);
 
-//Review Rotater
-const reviews = [
-  {
-    company: "3Portals",
-    text: "Marketo helped us scale our marketing without long-term contracts. Super effective!",
-  },
-  {
-    company: "Codecraft_",
-    text: "A game-changer for our agency. We finally found flexibility with real ROI.",
-  },
-  {
-    company: "Peregrin",
-    text: "Professional, consistent, and creative. Perfect match for our fast-growing startup.",
-  },
-  {
-    company: "Quixotic",
-    text: "Seamless onboarding and instant performance—our brand visibility skyrocketed.",
-  },
-  {
-    company: "Goodwill",
-    text: "Marketo has become an essential part of our marketing toolkit. Highly recommended!",
-  },
-];
+
 
 let index = 0;
 const reviewEl = document.getElementById("company-review");
