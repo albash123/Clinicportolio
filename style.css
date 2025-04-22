@@ -6,6 +6,7 @@ body {
   min-height: 100vh;
   border-color: #fafafa;
 }
+
 .landingpage {
   background: linear-gradient(to bottom, #fafafa 90%, #a7d7c5);
   color: white;
@@ -2909,15 +2910,18 @@ body {
   z-index: 1055; /* above navbar / modals                    */
 }
 /* so 3‑D rotations have depth */
-.hero-title{ perspective:800px; }
-
-/* optional fancy gradient fill */
-@media(prefers-color-scheme:dark){
-  .hero-title{ background:linear-gradient(90deg,#22d3ee,#4f46e5,#a855f7);
-               -webkit-background-clip:text;
-               color:transparent; }
+.hero-title {
+  perspective: 800px;
 }
 
+/* optional fancy gradient fill */
+@media (prefers-color-scheme: dark) {
+  .hero-title {
+    background: linear-gradient(90deg, #22d3ee, #4f46e5, #a855f7);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+}
 
 .fi-btn {
   --size: 48px; /* easy tweak */
