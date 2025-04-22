@@ -969,6 +969,22 @@ h1.display-3 {
   margin-right: auto;
   line-height: 1.6;
 }
+.btn_desk {
+  background-color: #2a49c6;
+  border: 2px solid #0024b8;
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  font-weight: 700;
+  transition: all 1s ease-in-out;
+}
+
+.btn_desk:hover {
+  background-color: #f3f3f3;
+  border: 2px solid rgb(29, 0, 251);
+  color: rgb(29, 0, 251);
+}
 
 .process-number {
   font-size: 8rem;
