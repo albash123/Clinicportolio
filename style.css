@@ -7,6 +7,11 @@ body {
   border-color: #fafafa;
 }
 
+html, body{
+  overflow-x: hidden;
+}
+
+
 .landingpage {
   background: linear-gradient(to bottom, #fafafa 90%, #a7d7c5);
   color: white;
