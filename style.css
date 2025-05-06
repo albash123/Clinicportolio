@@ -3,7 +3,7 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   overflow-x: hidden;
   position: relative;
-
+  scroll-behavior: smooth;
   min-height: 100vh;
   border-color: #fafafa;
 }
@@ -2988,4 +2988,32 @@ body {
     --size: 40px;
     font-size: 1.1rem;
   }
+}
+.services-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.5;
+  z-index: 5;
+}
+
+.services-card:hover .overlay-text {
+  opacity: 1;
 }
