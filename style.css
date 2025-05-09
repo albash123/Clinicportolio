@@ -869,6 +869,7 @@ h1.display-3 {
   font-weight: 600;
   margin-bottom: 0;
   font-size: 1rem;
+  color: #a7d7c5;
 }
 .user-handle {
   color: #8a8a8a;
@@ -2042,7 +2043,7 @@ body {
   border-radius: 50%;
 }
 .pricingsection-card {
-  background-color: #f8e5e5; /* Change background color to f8e5e5 */
+  background-color: #97d0bc2f; /* Change background color to f8e5e5 */
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
@@ -2056,7 +2057,7 @@ body {
 }
 
 .pricingsection-premium-card {
-  background-color: #f8e5e5; /* Change background color to f8e5e5 */
+  background-color: #97d0bc2f; /* Change background color to f8e5e5 */
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
@@ -2130,7 +2131,7 @@ body {
 }
 
 .pricingsection-feature-list li i {
-  color: #10b981;
+  color: #ec0c0c81;
   margin-right: 10px;
   font-size: 1.1rem;
   margin-top: 3px;
@@ -2141,7 +2142,7 @@ body {
 }
 
 .btn-dark {
-  background-color: #111827;
+  background-color: #000000bf;
   border-color: #111827;
 }
 
@@ -2151,9 +2152,9 @@ body {
 }
 
 .btn-light {
-  background-color: #f1f5f9;
+  background-color: #000000bf;
   border-color: #f1f5f9;
-  color: #0f172a;
+  color: #ffffff;
 }
 
 .btn-light:hover {
@@ -3029,10 +3030,60 @@ body {
 /* optional fancy gradient fill */
 @media (prefers-color-scheme: dark) {
   .hero-title {
-    background: linear-gradient(90deg, #22d3ee, #4f46e5, #a855f7);
+    background: linear-gradient(90deg, #11c8e4, #056472, #323131);
     -webkit-background-clip: text;
     color: transparent;
   }
+}
+
+.business-feature-card {
+  position: relative; /* establish positioning context */
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 0.5rem;
+  transition: transform 0.2s ease;
+}
+
+.business-feature-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Tooltip hidden by default */
+.feature-tooltip {
+  position: absolute;
+  bottom: 100%; /* place above the card */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50rem;
+  padding: 0.75rem;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  font-size: 0.875rem;
+  line-height: 1.2;
+  text-align: center;
+  border-radius: 0.25rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  z-index: 10;
+}
+
+/* Arrow below tooltip */
+.feature-tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%; /* at bottom of tooltip */
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 0.5rem;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.8) transparent transparent transparent;
+}
+
+/* Show on hover */
+.business-feature-card:hover .feature-tooltip {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .fi-btn {
@@ -3350,11 +3401,75 @@ p {
   outline: none; /* remove focus outline on click */
 }
 .logo_design {
-  height: 80px; /* Adjust height as needed */
+  height: 45px; /* Adjust height as needed */
   width: auto; /* Maintains aspect ratio */
   transition: transform 0.3s ease;
 }
 
 .logo_design:hover {
   transform: scale(1.05); /* Slight zoom on hover */
+}
+.glow-text {
+  color: #fff;
+  font-size: 5rem !important; /* default size for larger screens */
+}
+
+.typing-text {
+  color: #fff;
+  font-size: 5rem !important; /* default size for larger screens */
+}
+
+/* Make text smaller on small screens */
+@media (max-width: 576px) {
+  .glow-text {
+    font-size: 40px !important;
+  }
+
+  .typing-text {
+    font-size: 0.1px !important;
+  }
+}
+.tooltip-detail-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tooltip-detail-list li {
+  position: relative;
+  padding-left: 1.75rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #444;
+}
+
+.tooltip-detail-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0.2rem;
+  color: #2ca8a1;
+  font-size: 1.2rem;
+  line-height: 1;
+  text-align: start !important;
+}
+.feature-tooltip-list {
+  list-style: disc inside;
+  margin: 0;
+  padding: 0;
+  font-size: 0.85rem; /* smaller text */
+  line-height: 1.4;
+  color: #fff; /* adjust to your tooltip text color */
+}
+
+.feature-tooltip-list li {
+  margin-bottom: 0.5rem;
+}
+
+/* Hide tooltip on very small screens */
+@media (max-width: 786px) {
+  .feature-tooltip {
+    display: none !important;
+  }
 }

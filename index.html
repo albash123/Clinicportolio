@@ -53,7 +53,7 @@
 
 <script>
     document.addEventListener("DOMContentLoaded", () => {
-        const DELAY = 1_000;  // 5-second pause
+        const DELAY = 8_000;  // 5-second pause
         const slides = [...document.querySelectorAll(".info_text-section-container")];
         if (!slides.length) return;
 
@@ -120,7 +120,7 @@
 
 
                 <!-- Brand -->
-                <a class="navbar-brand d-flex align-items-center m-0" href="#" data-aos="zoom-in" data-aos-delay="100">
+                <a class="navbar-brand d-flex align-items-center " href="#" data-aos="zoom-in" data-aos-delay="100">
                     <img src="assets/df_prev_ui.png" class="logo_design" alt="Sirinica Logo">
                 </a>
 
@@ -130,37 +130,28 @@
                 <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item mx-1" data-aos="zoom-in" data-aos-delay="200">
-                            <a class="nav-link rounded-pill px-4" href="#">Services</a>
+                            <a class="nav-link rounded-pill px-4" href="#services">Services</a>
                         </li>
                         <li class="nav-item mx-1" data-aos="zoom-in" data-aos-delay="300">
                             <a class="nav-link rounded-pill px-4" href="#">Works</a>
                         </li>
                         <li class="nav-item mx-1" data-aos="zoom-in" data-aos-delay="400">
-                            <a class="nav-link rounded-pill px-4" href="#">Pricing</a>
+                            <a class="nav-link rounded-pill px-4" href="#pricing">Pricing</a>
                         </li>
                         <li class="nav-item mx-1" data-aos="zoom-in" data-aos-delay="500">
-                            <a class="nav-link rounded-pill px-4" href="#">Contact</a>
+                            <a class="nav-link rounded-pill px-4" href="#contact">Contact</a>
                         </li>
                         <li class="nav-item mx-1" data-aos="zoom-in" data-aos-delay="600">
-                            <a class="nav-link rounded-pill px-4" href="#">Blog</a>
+                            <a class="nav-link rounded-pill px-4" href="#faq">Faq</a>
                         </li>
                         <li class="nav-item mx-1" data-aos="zoom-in" data-aos-delay="700">
-                            <a class="nav-link rounded-pill px-4" href="#">Testimonials</a>
+                            <a class="nav-link rounded-pill px-4" href="#testominals">Testimonials</a>
                         </li>
                     </ul>
 
-                    <!-- Button desktop -->
-                    <a href="#" class="btn_desk  rounded-pill px-4 d-none d-lg-block" data-aos="zoom-in"
-                        data-aos-delay="600">
-                        Book a demo
-                    </a>
+
                 </div>
 
-                <!-- Button mobile -->
-                <a href="#" class="btn btn-outline-cyan rounded-pill px-2 d-lg-none" data-aos="zoom-in"
-                    data-aos-delay="700">
-                    Let's Try
-                </a>
 
                 <!-- Toggler -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -170,14 +161,14 @@
         </nav>
 
         <!-- landing Section -->
-        <section class="row justify-content-center text-center pt-4">
+        <section class="row justify-content-center text-center ">
             <!-- Logo Shape -->
-            <div class="col-12 position-relative " style="height: 200px;">
+            <div class="col-12 position-relative " style="height: 100px;">
                 <div class="logo-shape"></div>
             </div>
 
             <!-- Rating -->
-            <div class="  col-auto">
+            <div class="col-auto">
                 <div class="rating-badge ">
                     <div class="avatar-group ">
                         <div class="avatar bg-warning"></div>
@@ -201,7 +192,7 @@
 
             <!-- Subheading -->
             <div class="col-md-10 col-lg-8 col-xl-7">
-                <p class="lead text-white mb-5">
+                <p class="lead text-white ">
                     Say goodbye to manual records and chaotic schedules. Serenica provides expert, results-driven clinic
                     management software on a flexible subscription—no contracts, just seamless care
                 </p>
@@ -227,16 +218,20 @@
                         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
 
                         <p class="hero-text" data-aos="fade-up" data-aos-delay="400">
-                            Traditional marketing is expensive and unpredictable. We believe businesses
-                            deserve consistent, expert marketing without high costs or long-term contracts.
+                            Traditional clinic management is time-consuming and error-prone. We believe mental health
+                            practices deserve reliable, expert software without high costs or long-term contracts.
+
                         </p>
                         <button class="btn btn-primary" data-aos="zoom-in" data-aos-delay="600">Get Start Now</button>
                     </div>
                     <div class="col-lg-6" data-aos="fade-left">
                         <div class="hero-image">
+                            <video class="img-fluid" autoplay muted loop playsinline data-aos="zoom-in-up"
+                                data-aos-delay="300">
+                                <source src="/assets/info_video.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
 
-                            <img src="/assets/clinic_imge.png" alt="Marketing Team Collaboration" class="img-fluid"
-                                data-aos="zoom-in-up" data-aos-delay="300">
 
 
                             <div class="profile-bubbles">
@@ -338,7 +333,7 @@
                     <div class="col-lg-9 col-md-8 text-content">
                         <h2 class="main_heading">Authentication &amp; Encryption for Complete Security</h2>
                         <ul class="para_type">
-                            <li>End-to-end TLS 1.2+ encryption in transit and AES-256 at rest</li>
+                            <li>End-to-end encryption in transit and AES-256 at rest</li>
                             <li>Two-factor authentication for every login to prevent unauthorized access</li>
                             <li>IP whitelisting &amp; role-based permissions to control who sees what</li>
                             <li>Full audit logs of logins, changes &amp; exports for compliance and investigation</li>
@@ -367,7 +362,7 @@
                     <div class="col-md-9">
                         <h2 class="main_heading">Single Sign-On: Effortless Logins &amp; Enhanced Security</h2>
                         <ul class="para_type">
-                            <li>One-click access to all Serenica modules—appointments, EHR, billing &amp; analytics</li>
+                            <li>One-click access to all Serenica modules—appointments, billing &amp; analytics</li>
                             <li>Seamless navigation without repeated logins, saving time &amp; frustration</li>
                             <li>Centralized auth policies with MFA &amp; real-time session monitoring</li>
                             <li>Easy user provisioning/de-provisioning and full audit trails for compliance</li>
@@ -396,15 +391,16 @@
 
 
 
-        <section class="services-section py-5">
+        <section class="services-section py-5" id="services">
             <div class="container py-4">
                 <!-- Section Header -->
                 <div class="row text-center mb-5" data-aos="fade-up">
                     <div class="col-lg-8 mx-auto">
                         <h2 class="display-4 fw-bold mb-4 our-services-heading">Our Services</h2>
                         <p class="lead text-secondary">
-                            You're an e-commerce brand, local business, tech startup, or consultant — we handle your
-                            marketing so you can focus on growth.
+                            Whether you’re a solo therapist, small clinic, mental health practice, or wellness centre —
+                            Serenica handles your day-to-day operations so you can focus on patient care.
+
                         </p>
                     </div>
                 </div>
@@ -413,10 +409,35 @@
                 <div class="row align-items-center">
                     <!-- Left Column - Images with Floating Elements -->
                     <div class="col-lg-6 mb-5 mb-lg-0 position-relative" data-aos="zoom-in">
+                        <!-- unchanged container/column structure -->
                         <div class="services-image-container overflow-hidden">
-                            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-9pwkXczioC4K5oibZHRf9si6UPzoKq.png"
-                                alt="Marketing professional working" class="img-fluid">
+                            <video id="featureVideo" class="w-100 h-100" autoplay muted loop playsinline controls
+                                style="cursor: pointer;">
+                                <source src="assets/product_view.mp4" type="video/mp4">
+                                Your browser doesn’t support HTML5 video.
+                            </video>
                         </div>
+                        <!-- just before </body> -->
+                        <script>
+                            (function () {
+                                const vid = document.getElementById('featureVideo');
+                                if (!vid) return;
+
+                                vid.addEventListener('click', () => {
+                                    if (document.fullscreenElement) {
+                                        document.exitFullscreen();
+                                    } else if (vid.requestFullscreen) {
+                                        vid.requestFullscreen();
+                                    } else if (vid.webkitRequestFullscreen) { /* Safari */
+                                        vid.webkitRequestFullscreen();
+                                    } else if (vid.msRequestFullscreen) { /* IE11 */
+                                        vid.msRequestFullscreen();
+                                    }
+                                });
+                            })();
+                        </script>
+
+
 
                         <div class="services-rocket-icon">
                             <div class="services-icon-inner">
@@ -424,21 +445,7 @@
                             </div>
                         </div>
 
-                        <div class="services-growth-chart">
-                            <div class="services-chart-content">
-                                <div class="services-percentage">+70%</div>
-                                <div class="services-chart-image">
-                                    <svg viewBox="0 0 100 50" width="100%" height="40">
-                                        <polyline points="0,35 15,25 30,30 45,15 60,25 75,10 90,5" fill="none"
-                                            stroke="#22d3ee" stroke-width="2"></polyline>
-                                        <polyline points="0,35 15,25 30,30 45,15 60,25 75,10 90,5" fill="none"
-                                            stroke="rgba(34, 211, 238, 0.3)" stroke-width="8" stroke-linecap="round"
-                                            stroke-linejoin="round"></polyline>
-                                    </svg>
-                                </div>
-                                <div class="services-grow-text">GROW UP</div>
-                            </div>
-                        </div>
+
 
 
                     </div>
@@ -710,7 +717,7 @@
                     <div class="col-lg-8 mx-auto">
                         <h2 class="custom-heading display-4 fw-bold mb-4">Why Clinics Trust Our Subscription Model
                         </h2>
-                        <p class="leading-part-text">We don't just run campaigns—we create long-term growth strategies
+                        <p class="lead text-secondary">We don't just run campaigns—we create long-term growth strategies
                             that adapt to your business needs.</p>
                     </div>
                 </div>
@@ -771,52 +778,98 @@
                     <!-- Right Column - Feature Cards -->
                     <div class="col-lg-7">
                         <div class="row g-4">
-                            <!-- Feature Card 1 -->
-                            <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                            <!-- Telehealth & Messaging -->
+                            <div class="col-md-6">
                                 <div class="business-feature-card">
                                     <div class="business-icon-wrapper business-light-blue">
                                         <i class="fas fa-robot"></i>
                                     </div>
-                                    <h3 class="business-feature-title">Telehealth & Messaging</h3>
+                                    <h3 class="business-feature-title">Telehealth &amp; Messaging</h3>
+                                    <div class="feature-tooltip w-100">
+                                        <ul class="feature-tooltip-list">
+                                            <li>Secure video consultations let clinicians connect with patients from
+                                                anywhere, eliminating travel barriers.</li>
+                                            <li>End-to-end encrypted WebRTC ensures every call is private and
+                                                HIPAA-style compliant.</li>
+                                            <li>Launch sessions directly from the appointment calendar—no extra
+                                                downloads or third-party apps needed.</li>
+                                            <li>Built-in session recording (with consent) and automated documentation
+                                                link each call to the patient’s record.</li>
+                                        </ul>
+                                    </div>
+
                                 </div>
                             </div>
 
-                            <!-- Feature Card 2 -->
-                            <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                            <!-- Automated Workflows -->
+                            <div class="col-md-6">
                                 <div class="business-feature-card">
                                     <div class="business-icon-wrapper business-light-purple">
                                         <i class="fas fa-users-cog"></i>
                                     </div>
                                     <h3 class="business-feature-title">Automated Workflows</h3>
+                                    <div class="feature-tooltip w-100">
+                                        <ul class="feature-tooltip-list">
+                                            <li>Auto-assign tasks &amp; reminders in one click</li>
+                                            <li>Auto-generate billing events at each milestone</li>
+                                            <li>Modify workflows instantly—no coding needed</li>
+                                            <li>Modify workflow rules, approval chains, and notification<br> settings
+                                                on-the-fly without any coding.</li>
+                                        </ul>
+                                    </div>
+
+
                                 </div>
                             </div>
 
-                            <!-- Feature Card 3 -->
-                            <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+                            <!-- Data Security & Compliance -->
+                            <div class="col-md-6">
                                 <div class="business-feature-card">
                                     <div class="business-icon-wrapper business-light-indigo">
                                         <i class="fas fa-chart-bar"></i>
                                     </div>
-                                    <h3 class="business-feature-title">Data Security & Compliance</h3>
+                                    <h3 class="business-feature-title">Data Security &amp; Compliance</h3>
+                                    <div class="feature-tooltip">
+                                        <div class="feature-tooltip w-100">
+                                            <ul class="feature-tooltip-list">
+                                                <li>AES-256 encryption of data at rest</li>
+                                                <li>Comprehensive audit logs for all actions</li>
+                                                <li>Role-based access controls to limit permissions</li>
+                                            </ul>
+                                        </div>
+
+                                    </div>
                                 </div>
                             </div>
 
-                            <!-- Feature Card 4 -->
-                            <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+                            <!-- 24/7 Support & Updates -->
+                            <div class="col-md-6">
                                 <div class="business-feature-card">
                                     <div class="business-icon-wrapper business-light-yellow">
                                         <i class="fas fa-link"></i>
                                     </div>
-                                    <h3 class="business-feature-title">24/7 Support & Updates</h3>
+                                    <h3 class="business-feature-title">24/7 Support &amp; Updates</h3>
+                                    <div class="feature-tooltip">
+                                        <div class="feature-tooltip w-100 ">
+                                            <ul class="feature-tooltip-list">
+                                                <li>24/7 support via chat, email &amp; phone</li>
+                                                <li>Continuous feature releases driven by your feedback</li>
+                                            </ul>
+                                        </div>
+
+                                    </div>
                                 </div>
                             </div>
                         </div>
+
                     </div>
+
+
                 </div>
             </div>
         </section>
 
-        <section class="pricingsection-section py-5" data-aos="fade-up">
+        <section class="pricingsection-section py-5" data-aos="fade-up" id="pricing">
             <div class="container py-4">
                 <!-- Section Header -->
                 <div class="row text-center mb-5" data-aos="fade-down">
@@ -843,10 +896,10 @@
                                     </h2>
                                 </div>
                                 <p class="pricingsection-audience">Small businesses or startups</p>
-                                <div class="pricingsection-plan-icon pricingsection-starter-icon">
+                                <div class="pricingsection-plan-icon pricingsection-growth-icon">
                                     <svg viewBox="0 0 60 40" width="60" height="40">
-                                        <rect x="10" y="10" width="15" height="20" fill="#2563EB" />
-                                        <rect x="35" y="10" width="15" height="20" fill="#2563EB" />
+                                        <rect x="10" y="10" width="15" height="20" fill="#4F46E5" />
+                                        <rect x="35" y="10" width="15" height="20" fill="#4F46E5" />
                                     </svg>
                                 </div>
                                 <ul class="pricingsection-feature-list">
@@ -900,9 +953,10 @@
                                 </div>
                                 <p class="pricingsection-audience pricingsection-premium-text">Small businesses or
                                     Growths</p>
-                                <div class="pricingsection-plan-icon pricingsection-premium-icon">
+                                <div class="pricingsection-plan-icon pricingsection-growth-icon">
                                     <svg viewBox="0 0 60 40" width="60" height="40">
-                                        <path d="M30,5 L10,20 L20,20 L20,35 L40,35 L40,20 L50,20 Z" fill="#22D3EE" />
+                                        <rect x="10" y="10" width="15" height="20" fill="#4F46E5" />
+                                        <rect x="35" y="10" width="15" height="20" fill="#4F46E5" />
                                     </svg>
                                 </div>
                                 <ul class="pricingsection-feature-list pricingsection-premium-list">
@@ -976,7 +1030,7 @@
 
         <!--Testimonials sections -->
 
-        <section class=" test_sections section-padding">
+        <section class=" test_sections section-padding " id="testominals">
             <div class="container">
                 <div class="text-center mb-5">
 
@@ -1112,8 +1166,8 @@
 
         <!--Contact section-->
 
-        <section class="contact-section py-5" data-aos="fade-up">
-            <div class="container py-4">
+        <section class="contact-section py-5" data-aos="fade-up" id='contact'>
+            <div class=" container py-4">
                 <div class="row text-center mb-5" data-aos="zoom-in">
                     <div class="col-lg-8 mx-auto">
                         <h2 class=" heading_grow contact-display-4 fw-bold">Let's Grow Your Business – Talk to Us!</h2>
@@ -1131,7 +1185,8 @@
                             </div>
                             <div class="contact-info">
                                 <h4 class="contact-info-title">Call us</h4>
-                                <p class="contact-info-detail">+44 325 5687 35</p>
+                                <p class="contact-info-detail">+971 50 785 7279
+                                </p>
                             </div>
                         </div>
 
@@ -1142,7 +1197,7 @@
                             </div>
                             <div class="contact-info">
                                 <h4 class="contact-info-title">Email</h4>
-                                <p class="contact-info-detail">marketo@info.com</p>
+                                <p class="contact-info-detail">info@serenica.clinic</p>
                             </div>
                         </div>
 
@@ -1152,8 +1207,11 @@
                             </div>
                             <div class="contact-info">
                                 <h4 class="contact-info-title">Based in</h4>
-                                <p class="contact-info-detail mb-0">4140 Parker Rd. Allentown,</p>
-                                <p class="contact-info-detail">New Mexico</p>
+                                <p class="contact-info-detail mb-0">16-18 chapel street
+                                    Glossop<br>
+                                    Derbyshire 
+                                    SK13 8AT</p>
+
                             </div>
                         </div>
                     </div>
@@ -1204,7 +1262,7 @@
         <!-- FAQ Section -->
 
         <!-- FAQ Section -->
-        <section class="faq-section py-5" data-aos="fade-up">
+        <section class="faq-section py-5" data-aos="fade-up" id="faq">
             <div class="container py-4">
                 <div class="row">
                     <!-- Left Column -->
@@ -1348,7 +1406,7 @@
                             <ul class="fottersection-links">
                                 <li><a href="#">About</a></li>
                                 <li><a href="#">Service</a></li>
-                                <li><a href="#">Our Works</a></li>
+
                                 <li><a href="#">Contact Us</a></li>
                             </ul>
                         </div>
@@ -1360,9 +1418,10 @@
                             <h4 class="fottersection-widget-title">Utility Pages</h4>
                             <ul class="fottersection-links">
                                 <li><a href="#">Licenses</a></li>
-                                <li><a href="#">Changelog</a></li>
-                                <li><a href="#">Style Guide</a></li>
-                                <li><a href="#">Privacy Policy</a></li>
+
+                                <li><a href="assets/Serenica_Privacy_Policy.pdf" target="_blank"
+                                        rel="noopener noreferrer">Privacy Policy</a></li>
+
                             </ul>
                         </div>
                     </div>
@@ -1373,8 +1432,9 @@
                         <div class="fottersection-widget">
                             <h4 class="fottersection-widget-title">Social Media</h4>
                             <ul class="fottersection-links fottersection-social-links">
-                                <li><a href="#"><i class="fab fa-facebook-f"></i> Facebook</a></li>
-                                <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                                <li><a href="https://www.facebook.com/share/15eJWJ8BC5/"><i
+                                            class="fab fa-facebook-f"></i> Facebook</a></li>
+                                <li><a href=""><i class="fab fa-instagram"></i> Instagram</a></li>
                                 <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
                                 <li><a href="#"><i class="fab fa-linkedin-in"></i> LinkedIn</a></li>
                             </ul>
@@ -1386,18 +1446,14 @@
 
             <!-- Footer Bottom -->
             <div class="fottersection-bottom text-center py-4" data-aos="fade-up" data-aos-delay="500">
+
                 <div class="fottersection-logo mb-2">
-                    <svg viewBox="0 0 100 80" width="80" height="60">
-                        <path d="M20,20 L40,40 L60,20 L80,40 L60,60 L40,40 L20,60 L0,40 Z" fill="#22D3EE" />
-                        <path d="M20,20 L40,40 L20,60 L0,40 Z" fill="#3B82F6" />
-                        <path d="M60,20 L80,40 L60,60 L40,40 Z" fill="#4F46E5" />
-                    </svg>
-                    <h2 class="fottersection-logo-text">Marketo</h2>
+                    <img src="assets/df_prev_ui.png" class="logo_design" alt="Sirinica Logo">
                 </div>
-                <p class="fottersection-copyright">
-                    © 2025 Marketo. Proudly created with <a href="#" class="fottersection-link">Grabui Library</a>
-                </p>
+
+
             </div>
+
         </footer>
 
 
