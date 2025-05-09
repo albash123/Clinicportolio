@@ -36,6 +36,61 @@
         preloader.classList.add("hidden");
     });
 </script>
+<style>
+    .info_text-section-container {
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+        /* if you need to remove it from flow when hidden: */
+        display: none;
+    }
+
+    .info_text-section-container.active {
+        opacity: 1;
+        display: flex;
+        /* or block/grid, as appropriate */
+    }
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const DELAY = 1_000;  // 5-second pause
+        const slides = [...document.querySelectorAll(".info_text-section-container")];
+        if (!slides.length) return;
+
+        let i = 0;
+        slides[i].classList.add("active");
+
+        function nextSlide() {
+            const current = slides[i];
+            const nextIdx = (i + 1) % slides.length;
+            const next = slides[nextIdx];
+
+            // fade current out
+            current.style.opacity = "0";
+
+            current.addEventListener("transitionend", function handler() {
+                current.removeEventListener("transitionend", handler);
+
+                current.classList.remove("active");
+                current.style.opacity = "";
+
+                // prepare next
+                next.classList.add("active");
+                next.style.opacity = "0";
+                void next.offsetWidth;  // force reflow
+                next.style.opacity = "1";
+
+                i = nextIdx;
+                setTimeout(nextSlide, DELAY);
+            }, { once: true });
+        }
+
+        setTimeout(nextSlide, DELAY);
+    });
+</script>
+
+
+
 
 
 <body>
@@ -66,11 +121,7 @@
 
                 <!-- Brand -->
                 <a class="navbar-brand d-flex align-items-center m-0" href="#" data-aos="zoom-in" data-aos-delay="100">
-                    <svg class="marketo-logo me-2" viewBox="0 0 50 50" width="40" height="40">
-                        <path d="M25 5L5 20L25 35L45 20L25 5Z" fill="#3B82F6" fill-opacity="0.8"></path>
-                        <path d="M25 15L15 22.5L25 30L35 22.5L25 15Z" fill="#06B6D4" fill-opacity="0.9"></path>
-                    </svg>
-                    <span class="fw-bold fs-4">Serenica</span>
+                    <img src="assets/df_prev_ui.png" class="logo_design" alt="Sirinica Logo">
                 </a>
 
 
@@ -213,6 +264,130 @@
                 </div>
             </div>
         </section>
+
+
+        <section class="Features_view">
+            <div class="container py-5 transt_contatiner">
+
+                <!-- SLIDE 1 -->
+                <div class="row info_text-section-container align-items-center">
+                    <div class="col-md-2 text-center">
+                        <div class="icon-circle mx-auto">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <h2 class="main_heading">Customize Without IT or External Support</h2>
+                        <ul class="para_type">
+                            <li>Adapt workflows &amp; forms instantly with our intuitive admin UI—no IT or consultants
+                                needed</li>
+                            <li>Reduce delays and costs by updating patient pathways and session templates on the fly
+                            </li>
+                            <li>Modify services, compliance checks &amp; billing codes in seconds as regulations evolve
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+                <!-- SLIDE 2 -->
+                <div class="row info_text-section-container align-items-center">
+                    <div class="col-md-2 text-center">
+                        <div class="icon-circle mx-auto">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <h2 class="main_heading">Quickly Adapt Workflows &amp; Create Custom Forms</h2>
+                        <ul class="para_type">
+                            <li>Reorganize patient pathways in moments with our visual workflow editor</li>
+                            <li>Design custom intake, consent &amp; session forms via drag-and-drop</li>
+                            <li>Generate flexible reports that meet any regulatory requirement</li>
+                            <li>Update billing codes, assessment fields &amp; compliance checks instantly</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+                <!-- SLIDE 3 -->
+                <div class="row info_text-section-container align-items-center">
+                    <div class="col-md-2 text-center">
+                        <div class="icon-circle mx-auto">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="col-lg-9 col-md-8 text-content">
+                        <h2 class="main_heading">Authentication &amp; Encryption for Complete Security</h2>
+                        <ul class="para_type">
+                            <li>End-to-end TLS 1.2+ encryption in transit and AES-256 at rest</li>
+                            <li>Two-factor authentication for every login to prevent unauthorized access</li>
+                            <li>IP whitelisting &amp; role-based permissions to control who sees what</li>
+                            <li>Full audit logs of logins, changes &amp; exports for compliance and investigation</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SLIDE 2 -->
+                <div class="row info_text-section-container align-items-center">
+                    <div class="col-md-2 text-center">
+                        <div class="icon-circle mx-auto">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <h2 class="main_heading">Single Sign-On: Effortless Logins &amp; Enhanced Security</h2>
+                        <ul class="para_type">
+                            <li>One-click access to all Serenica modules—appointments, EHR, billing &amp; analytics</li>
+                            <li>Seamless navigation without repeated logins, saving time &amp; frustration</li>
+                            <li>Centralized auth policies with MFA &amp; real-time session monitoring</li>
+                            <li>Easy user provisioning/de-provisioning and full audit trails for compliance</li>
+                        </ul>
+
+
+                    </div>
+
+                </div>
+
+
+
+
+
+
+            </div>
+
+        </section>
+
+
 
 
 
@@ -377,187 +552,150 @@
         </script>
 
 
-        <!-- Carousel -->
-        <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-            <!-- Indicators -->
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
+        <!-- our work section Carousel -->
+        <!-- <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    </div>
+  
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="10000">
+        <section class="works-section py-5">
+          <div class="container py-4">
+            <div class="row text-center mb-5">
+              <div class="col-lg-8 mx-auto">
+                <h2 class="custom-heading display-4 fw-bold mb-4">Our Work</h2>
+                <p class="lead text-secondary">See how we've helped businesses like yours overcome challenges, improve engagement, and boost sales.</p>
+              </div>
             </div>
-
-            <!-- Slides -->
-            <div class="carousel-inner">
-
-                <!-- Slide 1 -->
-                <div class="carousel-item active" data-bs-interval="10000">
-                    <section class="works-section py-5">
-                        <div class="container py-4">
-                            <!-- Header -->
-                            <div class="row text-center mb-5">
-                                <div class="col-lg-8 mx-auto">
-                                    <h2 class="custom-heading display-4 fw-bold mb-4">Our Work</h2>
-
-                                    <p class="lead text-secondary">See how we've helped businesses like yours overcome
-                                        challenges, improve engagement, and boost sales.</p>
-                                </div>
-                            </div>
-
-                            <!-- Case Study -->
-                            <div class="row align-items-center">
-                                <!-- Left Column -->
-                                <div class="col-lg-4 mb-4 mb-lg-0">
-                                    <div class="d-flex align-items-center mb-4">
-                                        <div class="works-company-logo me-3">
-                                            <svg viewBox="0 0 40 40" width="40" height="40">
-                                                <circle cx="20" cy="20" r="15" fill="#A855F7"></circle>
-                                                <path d="M20,12 L28,20 L20,28 L12,20 Z" fill="#FFFFFF"></path>
-                                            </svg>
-                                        </div>
-                                        <h3 class="works-company-name mb-0">Quixotic</h3>
-                                    </div>
-
-                                    <div class="works-industry-tag mb-4">eCommerce industry</div>
-
-                                    <div class="works-case-study-section mb-4">
-                                        <h5>Challenge:</h5>
-                                        <p>What issue they faced before using your service.</p>
-                                    </div>
-                                    <div class="works-case-study-section">
-                                        <h5>Solution:</h5>
-                                        <p>How your service helped them (e.g., email automation, retention boost)</p>
-                                    </div>
-                                </div>
-
-                                <!-- Middle Column -->
-                                <div class="col-lg-4 mb-4 mb-lg-0">
-                                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-PC3OO4L2hl1DM2lPjfveW370Gc6xUO.png"
-                                        alt="Analytics dashboard" class="img-fluid rounded-4">
-                                </div>
-
-                                <!-- Right Column -->
-                                <div class="col-lg-4">
-                                    <div class="works-avatar-group mb-3">
-                                        <div class="works-avatar"
-                                            style="background-image: url('https://randomuser.me/api/portraits/men/32.jpg');">
-                                        </div>
-                                        <div class="works-avatar works-arrow-avatar"><i class="fas fa-arrow-right"></i>
-                                        </div>
-                                        <div class="works-avatar"
-                                            style="background-image: url('https://randomuser.me/api/portraits/men/33.jpg');">
-                                        </div>
-                                    </div>
-
-                                    <div class="works-results-percentage mb-3">
-                                        <h2 class="works-percentage">60%</h2>
-                                        <p>increase in<br>subscriber retention</p>
-                                    </div>
-
-                                    <div class="works-testimonial-card">
-                                        <p>"We saw a 60% increase in subscriber retention within just 3 months! The
-                                            automated email flows and targeted campaigns were a game-changer for our
-                                            business."</p>
-                                        <div class="d-flex align-items-center mt-3">
-                                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Teli samad"
-                                                class="rounded-circle me-3" width="50">
-                                            <div>
-                                                <h6 class="mb-0">Teli Samad</h6>
-                                                <small>CEO of Quixotic</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
+  
+            <div class="row align-items-center">
+              <div class="col-lg-4 mb-4 mb-lg-0">
+                <div class="d-flex align-items-center mb-4">
+                  <div class="works-company-logo me-3">
+                    <svg viewBox="0 0 40 40" width="40" height="40">
+                      <circle cx="20" cy="20" r="15" fill="#A855F7"></circle>
+                      <path d="M20,12 L28,20 L20,28 L12,20 Z" fill="#FFFFFF"></path>
+                    </svg>
+                  </div>
+                  <h3 class="works-company-name mb-0">Quixotic</h3>
                 </div>
-
-                <!-- Slide 2 -->
-                <div class="carousel-item" data-bs-interval="7000">
-                    <section class="works-section py-5">
-                        <div class="container py-4">
-                            <div class="row text-center mb-5">
-                                <div class="col-lg-8 mx-auto">
-                                    <h2 class="display-4 fw-bold mb-4">Our Work</h2>
-                                    <p class="lead text-secondary">We work with companies across industries to build
-                                        measurable growth.</p>
-                                </div>
-                            </div>
-
-                            <div class="row align-items-center">
-                                <!-- Left -->
-                                <div class="col-lg-4">
-                                    <svg width="100" height="60" viewBox="0 0 100 60" fill="none">
-                                        <rect x="10" y="10" width="20" height="20" fill="#6366F1" opacity="0.8" />
-                                        <rect x="35" y="10" width="20" height="20" fill="#6366F1" opacity="0.6" />
-                                        <rect x="60" y="10" width="20" height="20" fill="#6366F1" opacity="0.4" />
-                                        <rect x="10" y="35" width="20" height="20" fill="#6366F1" opacity="0.7" />
-                                        <rect x="35" y="35" width="20" height="20" fill="#6366F1" opacity="0.5" />
-                                    </svg>
-                                    <h4 class="mt-3">3Portals</h4>
-                                    <p class="text-muted">Real Estate industry</p>
-
-                                    <h5 class="mt-4">Challenge:</h5>
-                                    <p>They were struggling with cold leads and poor conversion rates.</p>
-                                    <h5>Solution:</h5>
-                                    <p>We implemented targeted PPC ads and email nurturing flows to re-engage them.</p>
-                                </div>
-
-                                <!-- Middle -->
-                                <div class="col-lg-4">
-                                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-XVWSrFlyVShKxZ2KYxxp0dnau0pJu4.png"
-                                        alt="Client image" class="img-fluid rounded-4">
-                                </div>
-
-                                <!-- Right -->
-                                <div class="col-lg-4">
-                                    <div class="works-avatar-group mb-3">
-                                        <img src="https://randomuser.me/api/portraits/men/50.jpg" class="rounded-circle"
-                                            width="50">
-                                        <img src="https://randomuser.me/api/portraits/men/51.jpg" class="rounded-circle"
-                                            width="50">
-                                        <img src="https://randomuser.me/api/portraits/men/52.jpg" class="rounded-circle"
-                                            width="50">
-                                    </div>
-                                    <div class="works-results-percentage mb-3">
-                                        <h2 class="works-percentage">70%</h2>
-                                        <p>increase in<br>subscriber retention</p>
-                                    </div>
-
-                                    <div class="works-testimonial-card">
-                                        <p>"Our lead generation skyrocketed by 75% in just 2 months! The PPC campaigns
-                                            and
-                                            SEO strategies helped us attract high-quality leads effortlessly."</p>
-                                        <div class="d-flex align-items-center mt-3">
-                                            <img src="https://randomuser.me/api/portraits/men/60.jpg" alt="John Duo"
-                                                class="rounded-circle me-3" width="50">
-                                            <div>
-                                                <h6 class="mb-0">John Duo</h6>
-                                                <small>CEO of 3Portals</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
+  
+                <div class="works-industry-tag mb-4">eCommerce industry</div>
+  
+                <div class="works-case-study-section mb-4">
+                  <h5>Challenge:</h5>
+                  <p>What issue they faced before using your service.</p>
                 </div>
+                <div class="works-case-study-section">
+                  <h5>Solution:</h5>
+                  <p>How your service helped them (e.g., email automation, retention boost)</p>
+                </div>
+              </div>
+  
+              <div class="col-lg-4 mb-4 mb-lg-0">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-PC3OO4L2hl1DM2lPjfveW370Gc6xUO.png" alt="Analytics dashboard" class="img-fluid rounded-4">
+              </div>
+  
+              <div class="col-lg-4">
+                <div class="works-avatar-group mb-3">
+                  <div class="works-avatar" style="background-image: url('https://randomuser.me/api/portraits/men/32.jpg');"></div>
+                  <div class="works-avatar works-arrow-avatar"><i class="fas fa-arrow-right"></i></div>
+                  <div class="works-avatar" style="background-image: url('https://randomuser.me/api/portraits/men/33.jpg');"></div>
+                </div>
+  
+                <div class="works-results-percentage mb-3">
+                  <h2 class="works-percentage">60%</h2>
+                  <p>increase in<br>subscriber retention</p>
+                </div>
+  
+                <div class="works-testimonial-card">
+                  <p>"We saw a 60% increase in subscriber retention within just 3 months! The automated email flows and targeted campaigns were a game-changer for our business."</p>
+                  <div class="d-flex align-items-center mt-3">
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Teli samad" class="rounded-circle me-3" width="50">
+                    <div>
+                      <h6 class="mb-0">Teli Samad</h6>
+                      <small>CEO of Quixotic</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-
-            <!-- Controls -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-
+          </div>
+        </section>
+      </div>
+  
+      <div class="carousel-item" data-bs-interval="7000">
+        <section class="works-section py-5">
+          <div class="container py-4">
+            <div class="row text-center mb-5">
+              <div class="col-lg-8 mx-auto">
+                <h2 class="display-4 fw-bold mb-4">Our Work</h2>
+                <p class="lead text-secondary">We work with companies across industries to build measurable growth.</p>
+              </div>
+            </div>
+  
+            <div class="row align-items-center">
+              <div class="col-lg-4">
+                <svg width="100" height="60" viewBox="0 0 100 60" fill="none">
+                  <rect x="10" y="10" width="20" height="20" fill="#6366F1" opacity="0.8" />
+                  <rect x="35" y="10" width="20" height="20" fill="#6366F1" opacity="0.6" />
+                  <rect x="60" y="10" width="20" height="20" fill="#6366F1" opacity="0.4" />
+                  <rect x="10" y="35" width="20" height="20" fill="#6366F1" opacity="0.7" />
+                  <rect x="35" y="35" width="20" height="20" fill="#6366F1" opacity="0.5" />
+                </svg>
+                <h4 class="mt-3">3Portals</h4>
+                <p class="text-muted">Real Estate industry</p>
+  
+                <h5 class="mt-4">Challenge:</h5>
+                <p>They were struggling with cold leads and poor conversion rates.</p>
+                <h5>Solution:</h5>
+                <p>We implemented targeted PPC ads and email nurturing flows to re-engage them.</p>
+              </div>
+  
+              <div class="col-lg-4">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-XVWSrFlyVShKxZ2KYxxp0dnau0pJu4.png" alt="Client image" class="img-fluid rounded-4">
+              </div>
+  
+              <div class="col-lg-4">
+                <div class="works-avatar-group mb-3">
+                  <img src="https://randomuser.me/api/portraits/men/50.jpg" class="rounded-circle" width="50">
+                  <img src="https://randomuser.me/api/portraits/men/51.jpg" class="rounded-circle" width="50">
+                  <img src="https://randomuser.me/api/portraits/men/52.jpg" class="rounded-circle" width="50">
+                </div>
+                <div class="works-results-percentage mb-3">
+                  <h2 class="works-percentage">70%</h2>
+                  <p>increase in<br>subscriber retention</p>
+                </div>
+  
+                <div class="works-testimonial-card">
+                  <p>"Our lead generation skyrocketed by 75% in just 2 months! The PPC campaigns and SEO strategies helped us attract high-quality leads effortlessly."</p>
+                  <div class="d-flex align-items-center mt-3">
+                    <img src="https://randomuser.me/api/portraits/men/60.jpg" alt="John Duo" class="rounded-circle me-3" width="50">
+                    <div>
+                      <h6 class="mb-0">John Duo</h6>
+                      <small>CEO of 3Portals</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+   -->
 
 
 
@@ -819,6 +957,7 @@
                     <p class="process-description">
                         In-app walkthroughs, live webinars, and hands-on support.
                     </p>
+
                 </div>
 
                 <!-- Step 3 -->
@@ -837,149 +976,136 @@
 
         <!--Testimonials sections -->
 
-        <section>
+        <section class=" test_sections section-padding">
+            <div class="container">
+                <div class="text-center mb-5">
 
-            <div class="testimonial-section">
-                <h2 class="testimonial-heading">Success Stories from<br>Our Happy Clients</h2>
+                    <h1 class="heading_main_test"> Our Community</h1>
+                </div>
 
-                <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        <!-- Testimonial 1 -->
-                        <div class="carousel-item active">
-                            <div class="testimonial-stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <div class="testimonial-content">
-                                <p>"Our marketing was scattered, with low social media engagement, poor website traffic,
-                                    and
-                                    ineffective email outreach. Since subscribing, we've experienced a <span
-                                        class="highlight">300% boost</span> in organic reach, and customer interactions
-                                    have
-                                    been more meaningful than ever."</p>
-                            </div>
-                            <div class="testimonial-author">
-                                <div class="author-image">
-                                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Bessie Cooper">
-                                </div>
-                                <div class="author-info">
-                                    <p class="author-name">Bessie Cooper</p>
-                                    <p class="author-title">Tech Startup Founder</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Testimonial 2 -->
-                        <div class="carousel-item">
-                            <div class="testimonial-stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <div class="testimonial-content">
-                                <p>"We were struggling to stand out in a crowded market. After implementing the
-                                    strategies
-                                    recommended, our conversion rate increased by <span class="highlight">75%</span> and
-                                    our
-                                    customer retention improved dramatically. The ROI has been incredible."</p>
-                            </div>
-                            <div class="testimonial-author">
-                                <div class="author-image">
-                                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Robert Johnson">
-                                </div>
-                                <div class="author-info">
-                                    <p class="author-name">Robert Johnson</p>
-                                    <p class="author-title">E-commerce Director</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Testimonial 3 -->
-                        <div class="carousel-item">
-                            <div class="testimonial-stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                            </div>
-                            <div class="testimonial-content">
-                                <p>"The personalized approach made all the difference. Our team was able to focus on
-                                    core
-                                    business while the marketing strategy was expertly handled. We've seen a <span
-                                        class="highlight">200% increase</span> in qualified leads within just 3 months."
-                                </p>
-                            </div>
-                            <div class="testimonial-author">
-                                <div class="author-image">
-                                    <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Sarah Williams">
-                                </div>
-                                <div class="author-info">
-                                    <p class="author-name">Sarah Williams</p>
-                                    <p class="author-title">Marketing Manager</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Testimonial 4 -->
-                        <div class="carousel-item">
-                            <div class="testimonial-stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <div class="testimonial-content">
-                                <p>"As a small business, we needed affordable solutions that actually work. The
-                                    strategies
-                                    implemented helped us compete with larger companies, and we've seen our online
-                                    presence
-                                    grow by <span class="highlight">400%</span> in just 6 months."</p>
-                            </div>
-                            <div class="testimonial-author">
-                                <div class="author-image">
-                                    <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="David Chen">
-                                </div>
-                                <div class="author-info">
-                                    <p class="author-name">David Chen</p>
-                                    <p class="author-title">Small Business Owner</p>
+                <div class="row g-4">
+                    <!-- 1  Brighton -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="testimonial-card">
+                            <div class="quote-icon">"</div>
+                            <p class="testimonial-text">
+                                Since moving to <span class="highlight">Serenica</span>, appointment no-shows have
+                                dropped by <span class="highlight">42 %</span>.
+                                The SMS reminders alone have paid for the platform twice over.
+                            </p>
+                            <div class="user-info">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" class="user-avatar"
+                                    alt="Olivia Turner">
+                                <div>
+                                    <p class="user-name">Olivia Turner</p>
+                                    <p class="user-handle">Practice Manager, Brighton Health Hub</p>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Navigation Arrows -->
-                    <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
+                    <!-- 2  London -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="testimonial-card">
+                            <div class="quote-icon">"</div>
+                            <p class="testimonial-text">
+                                Our London dental group finally has a single view of patients, stock and finance.
+                                <span class="highlight">Serenica’s</span> analytics dashboard is now my morning coffee
+                                ritual.
+                            </p>
+                            <div class="user-info">
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg" class="user-avatar"
+                                    alt="James Patel">
+                                <div>
+                                    <p class="user-name">James Patel</p>
+                                    <p class="user-handle">Founder, CitySmile Dental (London)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-                    <!-- Indicators/Dots -->
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active"
-                            aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1"
-                            aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2"
-                            aria-label="Slide 3"></button>
-                        <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="3"
-                            aria-label="Slide 4"></button>
+                    <!-- 3  Manchester -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="testimonial-card">
+                            <div class="quote-icon">"</div>
+                            <p class="testimonial-text">
+                                We opened a second clinic in Manchester and the rollout took <span class="highlight">one
+                                    afternoon</span>.
+                                That simply wouldn’t have been possible without Serenica’s cloud setup.
+                            </p>
+                            <div class="user-info">
+                                <img src="https://randomuser.me/api/portraits/women/65.jpg" class="user-avatar"
+                                    alt="Emily O'Connor">
+                                <div>
+                                    <p class="user-name">Emily O'Connor</p>
+                                    <p class="user-handle">COO, Northern Wellness Group</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4  Cardiff -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="testimonial-card">
+                            <div class="quote-icon">"</div>
+                            <p class="testimonial-text">
+                                Automated billing used to scare us. Now it’s a click.
+                                We’ve recovered more than <span class="highlight">£18 k</span> in missed invoices thanks
+                                to Serenica.
+                            </p>
+                            <div class="user-info">
+                                <img src="https://randomuser.me/api/portraits/men/42.jpg" class="user-avatar"
+                                    alt="Harry Evans">
+                                <div>
+                                    <p class="user-name">Harry Evans</p>
+                                    <p class="user-handle">Operations Director, Cardiff PhysioWorks</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 5  Glasgow -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="testimonial-card">
+                            <div class="quote-icon">"</div>
+                            <p class="testimonial-text">
+                                The staff app syncs rota changes in seconds—no more paper rotas on the notice board.
+                                <span class="highlight">Serenica</span> has modernised our whole practice.
+                            </p>
+                            <div class="user-info">
+                                <img src="https://randomuser.me/api/portraits/women/75.jpg" class="user-avatar"
+                                    alt="Sophie Green">
+                                <div>
+                                    <p class="user-name">Sophie Green</p>
+                                    <p class="user-handle">Practice Manager, Glasgow Family GP</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 6  Oxford -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="testimonial-card">
+                            <div class="quote-icon">"</div>
+                            <p class="testimonial-text">
+                                Switching EHRs felt daunting, but Serenica’s migration team imported six years of data
+                                with <span class="highlight">zero downtime</span>.
+                                Patients never noticed a thing.
+                            </p>
+                            <div class="user-info">
+                                <img src="https://randomuser.me/api/portraits/men/62.jpg" class="user-avatar"
+                                    alt="Raj Singh">
+                                <div>
+                                    <p class="user-name">Raj Singh</p>
+                                    <p class="user-handle">CEO, Oxford Mental Health Group</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-
-
         </section>
+
 
 
 
