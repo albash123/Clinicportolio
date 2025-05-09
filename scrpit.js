@@ -912,3 +912,26 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
 })();
+
+AOS.init({
+  duration: 1000, // animation duration
+  once: true, // whether animation should happen only once
+});
+(function () {
+  const vid = document.getElementById("featureVideo");
+  if (!vid) return;
+
+  vid.addEventListener("click", () => {
+    if (document.fullscreenElement) {
+      document.exitFullscreen();
+    } else if (vid.requestFullscreen) {
+      vid.requestFullscreen();
+    } else if (vid.webkitRequestFullscreen) {
+      /* Safari */
+      vid.webkitRequestFullscreen();
+    } else if (vid.msRequestFullscreen) {
+      /* IE11 */
+      vid.msRequestFullscreen();
+    }
+  });
+})();
