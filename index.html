@@ -7,13 +7,14 @@
     <title>Serinica.clinic</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
 
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
     <!-- SplitType (lightweight text splitter) -->
     <script src="https://cdn.jsdelivr.net/npm/split-type@0.3.3"></script>
@@ -36,20 +37,7 @@
         preloader.classList.add("hidden");
     });
 </script>
-<style>
-    .info_text-section-container {
-        opacity: 0;
-        transition: opacity 0.5s ease-in-out;
-        /* if you need to remove it from flow when hidden: */
-        display: none;
-    }
 
-    .info_text-section-container.active {
-        opacity: 1;
-        display: flex;
-        /* or block/grid, as appropriate */
-    }
-</style>
 
 <script>
     document.addEventListener("DOMContentLoaded", () => {
@@ -98,9 +86,6 @@
     <div id="preloader">
         <div class="spinner"></div>
     </div>
-
-
-
     <header class="landingpage ">
         <!-- Background Video -->
         <div class="video-background-wrapper position-absolute w-100 h-100 top-0 start-0 overflow-hidden z-n1">
@@ -130,8 +115,15 @@
                 <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item mx-1" data-aos="zoom-in" data-aos-delay="200">
+                            <a class="nav-link rounded-pill px-4" href="/about.html">
+                                About Us
+                            </a>
+                        </li>
+                        <li class="nav-item mx-1" data-aos="zoom-in" data-aos-delay="200">
                             <a class="nav-link rounded-pill px-4" href="#services">Services</a>
                         </li>
+
+
                         <li class="nav-item mx-1" data-aos="zoom-in" data-aos-delay="300">
                             <a class="nav-link rounded-pill px-4" href="#">Works</a>
                         </li>
@@ -280,7 +272,7 @@
                         <ul class="para_type">
                             <li>Adapt workflows &amp; forms instantly with our intuitive admin UI—no IT or consultants
                                 needed</li>
-                            <li>Reduce delays and costs by updating patient pathways and session templates on the fly
+                            <li>Reduce delays and costs by updating Client pathways and session templates on the fly
                             </li>
                             <li>Modify services, compliance checks &amp; billing codes in seconds as regulations evolve
                             </li>
@@ -309,7 +301,7 @@
                     <div class="col-md-9">
                         <h2 class="main_heading">Quickly Adapt Workflows &amp; Create Custom Forms</h2>
                         <ul class="para_type">
-                            <li>Reorganize patient pathways in moments with our visual workflow editor</li>
+                            <li>Reorganize Client pathways in moments with our visual workflow editor</li>
                             <li>Design custom intake, consent &amp; session forms via drag-and-drop</li>
                             <li>Generate flexible reports that meet any regulatory requirement</li>
                             <li>Update billing codes, assessment fields &amp; compliance checks instantly</li>
@@ -373,18 +365,64 @@
 
                 </div>
 
-
-
-
-
-
             </div>
 
         </section>
 
 
 
+        <section class="values-section">
+            <div class="container">
+                <h1 class="values-title">OUR VALUES</h1>
 
+                <div class="row">
+                    <!-- Business Ethics Card -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="value-card">
+                            <h3 class="value-title">Business Ethics</h3>
+                            <p class="value-text">
+                                Business ethics is one of T MOD's core values.
+                                Each of our employees attaches great
+                                importance to ethical rules and honesty in the
+                                business world. Our commitment to customers,
+                                business partners each other is based on doing
+                                our honestly reliably.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Learning and Development Card -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="value-card">
+                            <h3 class="value-title">Learning and Development</h3>
+                            <p class="value-text">
+                                Continuous learning and development is part of
+                                T MOD's culture in order to maintain a
+                                competitive advantage in a changing world. We
+                                aim to provide training and development
+                                opportunities to our employees and to have a
+                                team equipped with new knowledge and skills.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Social Responsibility Card -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="value-card">
+                            <h3 class="value-title">Social Responsibility</h3>
+                            <p class="value-text">
+                                Social responsibility awareness reflects the
+                                responsibility we feel towards society.
+                                Sustainability, environmental awareness and
+                                social contribution, we aim for our business to
+                                be sustainable not only economically but also
+                                socially and environmentally.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
 
         <!-- CSS (add this to your stylesheet or <style> block) -->
@@ -399,11 +437,14 @@
                         <h2 class="display-4 fw-bold mb-4 our-services-heading">Our Services</h2>
                         <p class="lead text-secondary">
                             Whether you’re a solo therapist, small clinic, mental health practice, or wellness centre —
-                            Serenica handles your day-to-day operations so you can focus on patient care.
+                            Serenica handles your day-to-day operations so you can focus on Client care.
 
                         </p>
                     </div>
                 </div>
+
+
+
 
                 <!-- Services Content -->
                 <div class="row align-items-center">
@@ -445,9 +486,6 @@
                             </div>
                         </div>
 
-
-
-
                     </div>
 
                     <!-- Right Column - Services List -->
@@ -483,15 +521,15 @@
                                     <i class="fas fa-folder-open"></i>
                                 </div>
                                 <div class="services-content">
-                                    <h3 class="services-title">Patient Records Management</h3>
-                                    <p class="services-description">Securely store, access, and manage patient data in
+                                    <h3 class="services-title">Client Records Management</h3>
+                                    <p class="services-description">Securely store, access, and manage Client data in
                                         one central system.</p>
                                 </div>
 
                                 <!-- Hover Overlay -->
                                 <div class="overlay-text">
                                     Centralized records ensure fast access, data security, and better decision-making in
-                                    patient care.
+                                    Client care.
                                 </div>
                             </div>
                         </div>
@@ -526,14 +564,14 @@
                                 </div>
                                 <div class="services-content">
                                     <h3 class="services-title">Analytics & Reporting</h3>
-                                    <p class="services-description">Get insights on appointments, revenue, patient
+                                    <p class="services-description">Get insights on appointments, revenue, Client
                                         retention, and more.</p>
                                 </div>
 
                                 <!-- Hover Overlay -->
                                 <div class="overlay-text">
                                     Make data-driven decisions using detailed reports on clinic performance, trends, and
-                                    patient behavior.
+                                    Client behavior.
                                 </div>
                             </div>
                         </div>
@@ -542,167 +580,12 @@
                     </div>
                 </div>
 
-
-
             </div>
             </div>
         </section>
 
-        <!-- AOS JS -->
-        <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-        <script>
-            AOS.init({
-                duration: 1000,
-                easing: 'ease-in-out',
-                once: true
-            });
-        </script>
 
 
-        <!-- our work section Carousel -->
-        <!-- <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    </div>
-  
-    <div class="carousel-inner">
-      <div class="carousel-item active" data-bs-interval="10000">
-        <section class="works-section py-5">
-          <div class="container py-4">
-            <div class="row text-center mb-5">
-              <div class="col-lg-8 mx-auto">
-                <h2 class="custom-heading display-4 fw-bold mb-4">Our Work</h2>
-                <p class="lead text-secondary">See how we've helped businesses like yours overcome challenges, improve engagement, and boost sales.</p>
-              </div>
-            </div>
-  
-            <div class="row align-items-center">
-              <div class="col-lg-4 mb-4 mb-lg-0">
-                <div class="d-flex align-items-center mb-4">
-                  <div class="works-company-logo me-3">
-                    <svg viewBox="0 0 40 40" width="40" height="40">
-                      <circle cx="20" cy="20" r="15" fill="#A855F7"></circle>
-                      <path d="M20,12 L28,20 L20,28 L12,20 Z" fill="#FFFFFF"></path>
-                    </svg>
-                  </div>
-                  <h3 class="works-company-name mb-0">Quixotic</h3>
-                </div>
-  
-                <div class="works-industry-tag mb-4">eCommerce industry</div>
-  
-                <div class="works-case-study-section mb-4">
-                  <h5>Challenge:</h5>
-                  <p>What issue they faced before using your service.</p>
-                </div>
-                <div class="works-case-study-section">
-                  <h5>Solution:</h5>
-                  <p>How your service helped them (e.g., email automation, retention boost)</p>
-                </div>
-              </div>
-  
-              <div class="col-lg-4 mb-4 mb-lg-0">
-                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-PC3OO4L2hl1DM2lPjfveW370Gc6xUO.png" alt="Analytics dashboard" class="img-fluid rounded-4">
-              </div>
-  
-              <div class="col-lg-4">
-                <div class="works-avatar-group mb-3">
-                  <div class="works-avatar" style="background-image: url('https://randomuser.me/api/portraits/men/32.jpg');"></div>
-                  <div class="works-avatar works-arrow-avatar"><i class="fas fa-arrow-right"></i></div>
-                  <div class="works-avatar" style="background-image: url('https://randomuser.me/api/portraits/men/33.jpg');"></div>
-                </div>
-  
-                <div class="works-results-percentage mb-3">
-                  <h2 class="works-percentage">60%</h2>
-                  <p>increase in<br>subscriber retention</p>
-                </div>
-  
-                <div class="works-testimonial-card">
-                  <p>"We saw a 60% increase in subscriber retention within just 3 months! The automated email flows and targeted campaigns were a game-changer for our business."</p>
-                  <div class="d-flex align-items-center mt-3">
-                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Teli samad" class="rounded-circle me-3" width="50">
-                    <div>
-                      <h6 class="mb-0">Teli Samad</h6>
-                      <small>CEO of Quixotic</small>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-  
-      <div class="carousel-item" data-bs-interval="7000">
-        <section class="works-section py-5">
-          <div class="container py-4">
-            <div class="row text-center mb-5">
-              <div class="col-lg-8 mx-auto">
-                <h2 class="display-4 fw-bold mb-4">Our Work</h2>
-                <p class="lead text-secondary">We work with companies across industries to build measurable growth.</p>
-              </div>
-            </div>
-  
-            <div class="row align-items-center">
-              <div class="col-lg-4">
-                <svg width="100" height="60" viewBox="0 0 100 60" fill="none">
-                  <rect x="10" y="10" width="20" height="20" fill="#6366F1" opacity="0.8" />
-                  <rect x="35" y="10" width="20" height="20" fill="#6366F1" opacity="0.6" />
-                  <rect x="60" y="10" width="20" height="20" fill="#6366F1" opacity="0.4" />
-                  <rect x="10" y="35" width="20" height="20" fill="#6366F1" opacity="0.7" />
-                  <rect x="35" y="35" width="20" height="20" fill="#6366F1" opacity="0.5" />
-                </svg>
-                <h4 class="mt-3">3Portals</h4>
-                <p class="text-muted">Real Estate industry</p>
-  
-                <h5 class="mt-4">Challenge:</h5>
-                <p>They were struggling with cold leads and poor conversion rates.</p>
-                <h5>Solution:</h5>
-                <p>We implemented targeted PPC ads and email nurturing flows to re-engage them.</p>
-              </div>
-  
-              <div class="col-lg-4">
-                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-XVWSrFlyVShKxZ2KYxxp0dnau0pJu4.png" alt="Client image" class="img-fluid rounded-4">
-              </div>
-  
-              <div class="col-lg-4">
-                <div class="works-avatar-group mb-3">
-                  <img src="https://randomuser.me/api/portraits/men/50.jpg" class="rounded-circle" width="50">
-                  <img src="https://randomuser.me/api/portraits/men/51.jpg" class="rounded-circle" width="50">
-                  <img src="https://randomuser.me/api/portraits/men/52.jpg" class="rounded-circle" width="50">
-                </div>
-                <div class="works-results-percentage mb-3">
-                  <h2 class="works-percentage">70%</h2>
-                  <p>increase in<br>subscriber retention</p>
-                </div>
-  
-                <div class="works-testimonial-card">
-                  <p>"Our lead generation skyrocketed by 75% in just 2 months! The PPC campaigns and SEO strategies helped us attract high-quality leads effortlessly."</p>
-                  <div class="d-flex align-items-center mt-3">
-                    <img src="https://randomuser.me/api/portraits/men/60.jpg" alt="John Duo" class="rounded-circle me-3" width="50">
-                    <div>
-                      <h6 class="mb-0">John Duo</h6>
-                      <small>CEO of 3Portals</small>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </div>
-  
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
-   -->
 
 
 
@@ -784,17 +667,17 @@
                                     <div class="business-icon-wrapper business-light-blue">
                                         <i class="fas fa-robot"></i>
                                     </div>
-                                    <h3 class="business-feature-title">Telehealth &amp; Messaging</h3>
+                                    <h3 class="business-feature-title">Health Bot</h3>
                                     <div class="feature-tooltip w-100">
                                         <ul class="feature-tooltip-list">
-                                            <li>Secure video consultations let clinicians connect with patients from
+                                            <li>Secure video consultations let clinicians connect with clients from
                                                 anywhere, eliminating travel barriers.</li>
                                             <li>End-to-end encrypted WebRTC ensures every call is private and
                                                 HIPAA-style compliant.</li>
                                             <li>Launch sessions directly from the appointment calendar—no extra
                                                 downloads or third-party apps needed.</li>
                                             <li>Built-in session recording (with consent) and automated documentation
-                                                link each call to the patient’s record.</li>
+                                                link each call to the client record.</li>
                                         </ul>
                                     </div>
 
@@ -1060,7 +943,7 @@
                         <div class="testimonial-card">
                             <div class="quote-icon">"</div>
                             <p class="testimonial-text">
-                                Our London dental group finally has a single view of patients, stock and finance.
+                                Our London dental group finally has a single view of Client's, stock and finance.
                                 <span class="highlight">Serenica’s</span> analytics dashboard is now my morning coffee
                                 ritual.
                             </p>
@@ -1141,7 +1024,7 @@
                             <p class="testimonial-text">
                                 Switching EHRs felt daunting, but Serenica’s migration team imported six years of data
                                 with <span class="highlight">zero downtime</span>.
-                                Patients never noticed a thing.
+                                Client's never noticed a thing.
                             </p>
                             <div class="user-info">
                                 <img src="https://randomuser.me/api/portraits/men/62.jpg" class="user-avatar"
@@ -1374,64 +1257,64 @@
             </div>
         </section>
 
+        <section class="newsletter-section">
+            <div class="bg-image"></div>
+            <div class="overlay"></div>
+
+            <div class="newsletter-content">
+                <h2 class="newsletter-title">Stay Connect</h2>
+                <p class="newsletter-text">
+                    By subscribing to our newsletter, you can be informed about special offers, current news and events.
+                    We are
+                    here to stay connected, serve you better and establish a closer communication with you.
+                </p>
+
+                <form class="newsletter-form">
+                    <input type="email" class="form-control me-md-3" placeholder="E-Mail" aria-label="Email address"
+                        required>
+                    <button type="submit" class="btn btn-join">JOIN</button>
+                </form>
+            </div>
+        </section>
+
         <footer class="fottersection-wrapper" data-aos="fade-up">
             <div class="fottersection-container container py-5">
                 <div class="fottersection-row row gy-4">
 
-                    <!-- Newsletter -->
-                    <div class="fottersection-col col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                        <div class="fottersection-widget">
-                            <h4 class="fottersection-widget-title">Newsletter</h4>
-                            <p class="fottersection-newsletter-text">Keep up our latest update. Subscribe to our
-                                newsletter.
-                            </p>
-                            <form id="fottersection-newsletterForm">
-                                <div class="fottersection-input-group input-group">
-                                    <input type="email" class="form-control fottersection-input"
-                                        placeholder="Email Address" required>
-                                    <button type="submit" class="btn fottersection-submit-btn">Submit Now</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-
                     <!-- Company Links -->
-                    <div class="fottersection-col col-lg-2 col-md-6 offset-lg-1" data-aos="fade-up"
+                    <div class="fottersection-col col-lg-3 col-md-6 offset-lg-1" data-aos="fade-up"
                         data-aos-delay="200">
                         <div class="fottersection-widget">
                             <h4 class="fottersection-widget-title">Company</h4>
                             <ul class="fottersection-links">
                                 <li><a href="#">About</a></li>
                                 <li><a href="#">Service</a></li>
-
                                 <li><a href="#">Contact Us</a></li>
                             </ul>
                         </div>
                     </div>
 
                     <!-- Utility Pages -->
-                    <div class="fottersection-col col-lg-2 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="fottersection-col col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
                         <div class="fottersection-widget">
                             <h4 class="fottersection-widget-title">Utility Pages</h4>
                             <ul class="fottersection-links">
                                 <li><a href="#">Licenses</a></li>
-
                                 <li><a href="assets/Serenica_Privacy_Policy.pdf" target="_blank"
                                         rel="noopener noreferrer">Privacy Policy</a></li>
-
                             </ul>
                         </div>
                     </div>
 
                     <!-- Social Media -->
-                    <div class="fottersection-col col-lg-2 col-md-6 offset-lg-1" data-aos="fade-up"
+                    <div class="fottersection-col col-lg-3 col-md-6 offset-lg-1" data-aos="fade-up"
                         data-aos-delay="400">
                         <div class="fottersection-widget">
-                            <h4 class="fottersection-widget-title">Social Media</h4>
+                            <h4 class="fottersection-widget-title">Follow Us</h4>
                             <ul class="fottersection-links fottersection-social-links">
                                 <li><a href="https://www.facebook.com/share/15eJWJ8BC5/"><i
                                             class="fab fa-facebook-f"></i> Facebook</a></li>
-                                <li><a href=""><i class="fab fa-instagram"></i> Instagram</a></li>
+                                <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
                                 <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
                                 <li><a href="#"><i class="fab fa-linkedin-in"></i> LinkedIn</a></li>
                             </ul>
@@ -1443,14 +1326,13 @@
 
             <!-- Footer Bottom -->
             <div class="fottersection-bottom text-center py-4" data-aos="fade-up" data-aos-delay="500">
-
                 <div class="fottersection-logo mb-2">
-                    <img src="assets/df_prev_ui.png" class="logo_design" alt="Sirinica Logo">
+                    <img src="assets/df_prev_ui.png" class="logo_design" alt="Serenica Logo">
                 </div>
-
-
+                <div class="fottersection-copyright">
+                    <p>© 2025 Serenica. All rights reserved.</p>
+                </div>
             </div>
-
         </footer>
 
 

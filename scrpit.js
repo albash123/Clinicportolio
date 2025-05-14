@@ -935,3 +935,42 @@ AOS.init({
     }
   });
 })();
+document.addEventListener("DOMContentLoaded", () => {
+  const DELAY = 8_000; // 5-second pause
+  const slides = [...document.querySelectorAll(".info_text-section-container")];
+  if (!slides.length) return;
+
+  let i = 0;
+  slides[i].classList.add("active");
+
+  function nextSlide() {
+    const current = slides[i];
+    const nextIdx = (i + 1) % slides.length;
+    const next = slides[nextIdx];
+
+    // fade current out
+    current.style.opacity = "0";
+
+    current.addEventListener(
+      "transitionend",
+      function handler() {
+        current.removeEventListener("transitionend", handler);
+
+        current.classList.remove("active");
+        current.style.opacity = "";
+
+        // prepare next
+        next.classList.add("active");
+        next.style.opacity = "0";
+        void next.offsetWidth; // force reflow
+        next.style.opacity = "1";
+
+        i = nextIdx;
+        setTimeout(nextSlide, DELAY);
+      },
+      { once: true }
+    );
+  }
+
+  setTimeout(nextSlide, DELAY);
+});
