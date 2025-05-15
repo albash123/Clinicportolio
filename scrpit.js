@@ -974,3 +974,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
   setTimeout(nextSlide, DELAY);
 });
+const magicCards = document.querySelectorAll(".magic-business-feature-card");
+
+magicCards.forEach((card) => {
+  card.addEventListener("mouseenter", () => {
+    // Collapse all
+    magicCards.forEach((c) => {
+      c.querySelector(".magic-feature-details").classList.remove("expanded");
+    });
+    // Expand hovered
+    card.querySelector(".magic-feature-details").classList.add("expanded");
+  });
+
+  card.addEventListener("mouseleave", () => {
+    // Collapse all on leave
+    magicCards.forEach((c) => {
+      c.querySelector(".magic-feature-details").classList.remove("expanded");
+    });
+  });
+});

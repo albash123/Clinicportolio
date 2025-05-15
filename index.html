@@ -29,6 +29,7 @@
 
 
 </head>
+<style></style>
 
 
 <!-- Preloader Script -->
@@ -193,8 +194,21 @@
 
             <!-- CTA Button -->
             <div class="col-12 mb-5">
-                <button class="btn btn-light rounded-pill px-5 py-3 fw-medium">Get Started Now</button>
+                <button class="btn btn-light rounded-pill px-5 py-3 fw-medium" id="get">Get Start Now</button>
             </div>
+
+            <script>
+                document.getElementById('get').addEventListener('click', function () {
+                    const pricingSection = document.getElementById('pricing');
+                    if (pricingSection) {
+                        pricingSection.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            </script>
+
+
+
+
         </section>
     </header>
 
@@ -214,13 +228,26 @@
                             practices deserve reliable, expert software without high costs or long-term contracts.
 
                         </p>
-                        <button class="btn btn-primary" data-aos="zoom-in" data-aos-delay="600">Get Start Now</button>
+
+
+                        <button id="get2" class="btn btn-primary" data-aos="zoom-in" data-aos-delay="600">Get Start
+                            Now</button>
+
+                        <script>
+                            document.getElementById('get2').addEventListener('click', function () {
+                                const pricingSection = document.getElementById('pricing');
+                                if (pricingSection) {
+                                    pricingSection.scrollIntoView({ behavior: 'smooth' });
+                                }
+                            });
+                        </script>
+
                     </div>
                     <div class="col-lg-6" data-aos="fade-left">
                         <div class="hero-image">
                             <video class="img-fluid" autoplay muted loop playsinline data-aos="zoom-in-up"
                                 data-aos-delay="300">
-                                <source src="/assets/info_video.mp4" type="video/mp4">
+                                <source src="/assets/video_doc.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
 
@@ -252,9 +279,9 @@
             </div>
         </section>
 
-
+        <!--Info area-->
         <section class="Features_view">
-            <div class="container py-5 transt_contatiner">
+            <div class="container  transt_contatiner">
 
                 <!-- SLIDE 1 -->
                 <div class="row info_text-section-container align-items-center">
@@ -379,14 +406,12 @@
                     <!-- Business Ethics Card -->
                     <div class="col-lg-4 col-md-6 mb-4">
                         <div class="value-card">
-                            <h3 class="value-title">Business Ethics</h3>
+                            <h3 class="value-title">Integrity and Trust</h3>
                             <p class="value-text">
-                                Business ethics is one of T MOD's core values.
-                                Each of our employees attaches great
-                                importance to ethical rules and honesty in the
-                                business world. Our commitment to customers,
-                                business partners each other is based on doing
-                                our honestly reliably.
+                                At Serenica, we prioritize honesty and transparency in all our dealings with clients,
+                                partners, and employees. We are committed to maintaining the highest ethical standards,
+                                ensuring that our services and solutions are always reliable and trustworthy. Our
+                                foundation is built on a commitment to doing the right thing, always.
                             </p>
                         </div>
                     </div>
@@ -394,14 +419,13 @@
                     <!-- Learning and Development Card -->
                     <div class="col-lg-4 col-md-6 mb-4">
                         <div class="value-card">
-                            <h3 class="value-title">Learning and Development</h3>
+                            <h3 class="value-title">Innovation and Excellence</h3>
                             <p class="value-text">
-                                Continuous learning and development is part of
-                                T MOD's culture in order to maintain a
-                                competitive advantage in a changing world. We
-                                aim to provide training and development
-                                opportunities to our employees and to have a
-                                team equipped with new knowledge and skills.
+                                We are dedicated to continuously improving our platform and services to meet the
+                                evolving needs of the mental health industry. Our focus on innovation drives us to adopt
+                                new technologies, enhance functionality, and provide exceptional solutions that support
+                                our clients in delivering high-quality care. We strive for excellence in everything we
+                                do.
                             </p>
                         </div>
                     </div>
@@ -409,14 +433,13 @@
                     <!-- Social Responsibility Card -->
                     <div class="col-lg-4 col-md-6 mb-4">
                         <div class="value-card">
-                            <h3 class="value-title">Social Responsibility</h3>
+                            <h3 class="value-title">Social Impact and Responsibility</h3>
                             <p class="value-text">
-                                Social responsibility awareness reflects the
-                                responsibility we feel towards society.
-                                Sustainability, environmental awareness and
-                                social contribution, we aim for our business to
-                                be sustainable not only economically but also
-                                socially and environmentally.
+                                Serenica is committed to making a positive impact on society, not just through the
+                                software we provide, but also by supporting mental health awareness and initiatives. We
+                                believe in the importance of sustainability, inclusivity, and contributing to the
+                                well-being of the communities we serve. We work to ensure our solutions contribute to
+                                both social and environmental good.
                             </p>
                         </div>
                     </div>
@@ -425,9 +448,9 @@
         </section>
 
 
-        <!-- CSS (add this to your stylesheet or <style> block) -->
 
 
+        <!--Services section-->
 
         <section class="services-section py-5" id="services">
             <div class="container py-4">
@@ -689,14 +712,7 @@
             </div>
         </section>
 
-
-
-
-
-
-
         <!--Why buinesses choose us section-->
-
 
         <section class="business-subscription-section py-5" data-aos="fade-up">
             <div class="container py-4">
@@ -850,30 +866,7 @@
             </div>
         </section>
 
-
-
-        <script>
-            const magicCards = document.querySelectorAll('.magic-business-feature-card');
-
-            magicCards.forEach(card => {
-                card.addEventListener('mouseenter', () => {
-                    // Collapse all
-                    magicCards.forEach(c => {
-                        c.querySelector('.magic-feature-details').classList.remove('expanded');
-                    });
-                    // Expand hovered
-                    card.querySelector('.magic-feature-details').classList.add('expanded');
-                });
-
-                card.addEventListener('mouseleave', () => {
-                    // Collapse all on leave
-                    magicCards.forEach(c => {
-                        c.querySelector('.magic-feature-details').classList.remove('expanded');
-                    });
-                });
-            });
-        </script>
-
+        <!--Pricing section-->
         <section class="pricingsection-section py-5" data-aos="fade-up" id="pricing">
             <div class="container py-4">
                 <!-- Section Header -->
@@ -881,67 +874,86 @@
                     <div class="col-lg-8 mx-auto">
                         <h2 class="pricing_head display-4 fw-bold mb-3">Transparent Pricing</h2>
                         <p class="lead text-secondary">
-                            Our subscription-based marketing plans give you ongoing expert marketing at a predictable
-                            monthly cost so your business gets continuous
+                            Choose the plan that fits your clinic’s needs. Flexible monthly and yearly subscriptions in
+                            PKR.
                         </p>
                     </div>
                 </div>
 
-
-
                 <!-- Pricing Cards -->
                 <div class="row g-4">
-                    <!-- Starter Plan -->
+                    <!-- Basic Plan -->
                     <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
                         <div class="pricingsection-card pricingsection-starter-card">
                             <div class="card-body">
-                                <h3 class="pricingsection-plan-name">Starter Plan</h3>
+                                <h3 class="pricingsection-plan-name">Basic</h3>
+                                <p class="pricingsection-plan-subtitle">Starter Clinic</p>
                                 <div class="pricingsection-price-container">
-                                    <h2 class="pricingsection-price">$299<span class="pricingsection-period">/mo</span>
-                                    </h2>
-                                </div>
-                                <p class="pricingsection-audience">Small businesses or startups</p>
-                                <div class="pricingsection-plan-icon pricingsection-growth-icon">
-                                    <svg viewBox="0 0 60 40" width="60" height="40">
-                                        <rect x="10" y="10" width="15" height="20" fill="#4F46E5" />
-                                        <rect x="35" y="10" width="15" height="20" fill="#4F46E5" />
-                                    </svg>
+                                    <h2 class="pricingsection-price">PKR 4,999<span
+                                            class="pricingsection-period">/month</span></h2>
+                                    <h2 class="pricingsection-price">PKR 54,999<span
+                                            class="pricingsection-period">/year</span></h2>
                                 </div>
                                 <ul class="pricingsection-feature-list">
-                                    <li><i class="fas fa-check-circle"></i> Social media management</li>
-                                    <li><i class="fas fa-check-circle"></i> Basic SEO optimization</li>
-                                    <li><i class="fas fa-check-circle"></i> Email marketing (2 campaigns/month)</li>
-                                    <li><i class="fas fa-check-circle"></i> Monthly analytics report</li>
-                                    <li><i class="fas fa-check-circle"></i> Advanced marketing strategies</li>
+                                    <ul>
+                                        <li><i class="fas fa-tachometer-alt"></i> Dashboard</li>
+                                        <li><i class="fas fa-user-injured"></i> Patients</li>
+                                        <li><i class="fas fa-calendar-check"></i> Appointments</li>
+                                        <li><i class="fas fa-users"></i> Subscriber</li>
+                                        <li><i class="fas fa-user-md"></i> 1 Psychologist/Staff</li>
+                                        <li><i class="fas fa-door-open"></i> Front Desk</li>
+                                        <li><i class="fas fa-comment-dots"></i> Feedback Form</li>
+                                        <li><i class="fas fa-blog"></i> Blog Management</li>
+                                    </ul>
+
                                 </ul>
+                                <h5>Limitations:</h5>
+                                <ul class="pricingsection-feature-list">
+                                    <li><i class="fas fa-user-injured"></i> Maximum of 100 active patients supported
+                                    </li>
+                                    <li><i class="fas fa-user-shield"></i> Single admin/user account access</li>
+                                    <li><i class="fas fa-file-invoice-dollar"></i> HR and Payroll features are not
+                                        included</li>
+                                </ul>
+
                                 <a href="#" class="btn btn-dark w-100 py-3 rounded-pill">Get Start Now</a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Growth Plan -->
+                    <!-- Standard Plan -->
                     <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
                         <div class="pricingsection-card pricingsection-growth-card">
                             <div class="card-body">
-                                <h3 class="pricingsection-plan-name">Growth Plan</h3>
+                                <h3 class="pricingsection-plan-name">Standard</h3>
+                                <p class="pricingsection-plan-subtitle">Growing Practice</p>
                                 <div class="pricingsection-price-container">
-                                    <h2 class="pricingsection-price">$349<span class="pricingsection-period">/mo</span>
-                                    </h2>
-                                </div>
-                                <p class="pricingsection-audience">Small businesses or Growths</p>
-                                <div class="pricingsection-plan-icon pricingsection-growth-icon">
-                                    <svg viewBox="0 0 60 40" width="60" height="40">
-                                        <rect x="10" y="10" width="15" height="20" fill="#4F46E5" />
-                                        <rect x="35" y="10" width="15" height="20" fill="#4F46E5" />
-                                    </svg>
+                                    <h2 class="pricingsection-price">PKR 9,999<span
+                                            class="pricingsection-period">/month</span></h2>
+                                    <h2 class="pricingsection-price">PKR 109,999<span
+                                            class="pricingsection-period">/year</span></h2>
                                 </div>
                                 <ul class="pricingsection-feature-list">
-                                    <li><i class="fas fa-check-circle"></i> Social media management</li>
-                                    <li><i class="fas fa-check-circle"></i> Paid advertising (Google & social ads)</li>
-                                    <li><i class="fas fa-check-circle"></i> Lead generation strategy</li>
-                                    <li><i class="fas fa-check-circle"></i> Content marketing (blogs)</li>
-                                    <li><i class="fas fa-check-circle"></i> Conversion rate optimization</li>
+                                    <li><i class="fas fa-tachometer-alt"></i> Dashboard</li>
+                                    <li><i class="fas fa-user-injured"></i> Patients</li>
+                                    <li><i class="fas fa-calendar-check"></i> Appointments</li>
+                                    <li><i class="fas fa-users"></i> Subscriber</li>
+                                    <li><i class="fas fa-user-md"></i> 1 Psychologist/Staff</li>
+                                    <li><i class="fas fa-door-open"></i> Front Desk</li>
+                                    <li><i class="fas fa-comment-alt"></i> Feedback Form</li>
+                                    <li><i class="fas fa-blog"></i> Blog Management</li>
                                 </ul>
+
+                                <h5>Limitations:</h5>
+                                <ul class="pricingsection-feature-list">
+                                    <li><i class="fas fa-exclamation-circle"></i> Maximum of 800 active patients
+                                        supported</li>
+                                    <li><i class="fas fa-user-cog"></i> Up to 3 admin users with full management access
+                                    </li>
+                                    <li><i class="fas fa-ban"></i> Custom branding options are not included in this plan
+                                    </li>
+                                </ul>
+
                                 <a href="#" class="btn btn-dark w-100 py-3 rounded-pill">Get Start Now</a>
                             </div>
                         </div>
@@ -951,27 +963,42 @@
                     <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
                         <div class="pricingsection-card pricingsection-premium-card">
                             <div class="card-body">
-                                <h3 class="pricingsection-plan-name pricingsection-premium-title">Premium Plan</h3>
+                                <h3 class="pricingsection-plan-name pricingsection-premium-title">Premium</h3>
+                                <p class="pricingsection-plan-subtitle">Clinic Enterprise</p>
                                 <div class="pricingsection-price-container">
-                                    <h2 class="pricingsection-price pricingsection-premium-price">$469<span
-                                            class="pricingsection-period">/mo</span></h2>
+                                    <h2 class="pricingsection-price">PKR 19,999<span
+                                            class="pricingsection-period">/month</span></h2>
+                                    <h2 class="pricingsection-price">PKR 219,999<span
+                                            class="pricingsection-period">/year</span></h2>
                                 </div>
-                                <p class="pricingsection-audience pricingsection-premium-text">Small businesses or
-                                    Growths</p>
-                                <div class="pricingsection-plan-icon pricingsection-growth-icon">
-                                    <svg viewBox="0 0 60 40" width="60" height="40">
-                                        <rect x="10" y="10" width="15" height="20" fill="#4F46E5" />
-                                        <rect x="35" y="10" width="15" height="20" fill="#4F46E5" />
-                                    </svg>
-                                </div>
-                                <ul class="pricingsection-feature-list pricingsection-premium-list">
-                                    <li><i class="fas fa-check-circle"></i> Social media management</li>
-                                    <li><i class="fas fa-check-circle"></i> Advanced SEO & competitor analysis</li>
-                                    <li><i class="fas fa-check-circle"></i> Custom marketing strategy</li>
-                                    <li><i class="fas fa-check-circle"></i> Content marketing (blogs)</li>
-                                    <li><i class="fas fa-check-circle"></i> Dedicated account manager</li>
+                                <ul class="pricingsection-feature-list">
+                                    <li><i class="fas fa-cogs"></i> Standard Plan Features</li>
+                                    <li><i class="fas fa-users"></i> Unlimited Patients & Staff</li>
+                                    <li><i class="fas fa-user-tie"></i> Advanced HR & Payroll</li>
+                                    <li><i class="fas fa-file-alt"></i> All Reports</li>
+                                    <li><i class="fas fa-blog"></i> Advanced Blog Management</li>
+                                    <li><i class="fas fa-language"></i> Multi-Language Support</li>
+                                    <li><i class="fas fa-user-shield"></i> Custom Roles</li>
+                                    <li><i class="fas fa-code"></i> API Access</li>
                                 </ul>
-                                <a href="#" class="btn btn-light w-100 py-3 rounded-pill">Get Start Now</a>
+                                <h5>Limitations:</h5>
+                                <ul class="pricingsection-feature-list">
+                                    <li><i class="fas fa-check-circle"></i> No limits on patients, staff, or
+                                        features—enjoy full access to everything Serenica offers.</li>
+                                    <li><i class="fas fa-check-circle"></i> Unlimited users and roles for complete team
+                                        collaboration.</li>
+                                    <li><i class="fas fa-check-circle"></i> No restrictions on data storage or report
+                                        generation.</li>
+                                    <li><i class="fas fa-check-circle"></i> Full flexibility with API access and custom
+                                        integrations.</li>
+                                    <li><i class="fas fa-check-circle"></i> Priority support and continuous feature
+                                        updates included.</li>
+                                </ul>
+
+                                <a href="#" class="btn btn-light w-100 py-3 rounded-pill mt-3">Get Start Now</a>
+
+
+
                             </div>
                         </div>
                     </div>
@@ -979,15 +1006,16 @@
             </div>
         </section>
 
+
         <!--Process Section-->
         <section class="process-section px-4 px-md-5 py-5">
             <div class="row mb-5">
                 <div class="col-12 text-center">
                     <h1 class="process-heading" data-aos="fade-up">Consistent Growth in Just a<br>Simple 3-Steps</h1>
                     <p class="process-subheading" data-aos="fade-up" data-aos-delay="200">
-                        We follow a structured, data-driven process to ensure your marketing strategy delivers
-                        consistent
-                        growth and measurable results.
+                        We follow a structured, data-driven approach to ensure Serenica delivers consistent clinic
+                        efficiency, improved patient outcomes, and measurable operational results.
+
                     </p>
                 </div>
             </div>
@@ -1031,7 +1059,6 @@
         </section>
 
         <!--Testimonials sections -->
-
         <section class=" test_sections section-padding " id="testominals">
             <div class="container">
                 <div class="text-center mb-5">
@@ -1161,18 +1188,12 @@
                 </div>
             </div>
         </section>
-
-
-
-
-
         <!--Contact section-->
-
         <section class="contact-section py-5" id='contact'>
             <div class=" container py-4">
                 <div class="row text-center mb-5" data-aos="zoom-in">
                     <div class="col-lg-8 mx-auto">
-                        <h2 class=" heading_grow contact-display-4 fw-bold">Let's Grow Your Business – Talk to Us!</h2>
+                        <h2 class=" heading_grow fw-bold">Let's Grow Your Business – Talk to Us!</h2>
                     </div>
                 </div>
 
@@ -1259,10 +1280,6 @@
         </section>
 
 
-
-
-        <!-- FAQ Section -->
-
         <!-- FAQ Section -->
         <section class="faq-section py-5" data-aos="fade-up" id="faq">
             <div class="container py-4">
@@ -1272,9 +1289,8 @@
                         <div class="faq-header">
                             <h2 class="faq-title mb-4">Answers to Your Top Questions</h2>
                             <p class="faq-description">
-                                Check out our frequently asked questions to learn more about our process, services, and
-                                what
-                                to expect.
+                                Find answers to frequently asked questions about Serenica’s features, onboarding
+                                process, and support.
                             </p>
                         </div>
                     </div>
@@ -1287,15 +1303,15 @@
                                 <h2 class="accordion-header" id="headingOne">
                                     <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        What services do you offer?
+                                        What features does Serenica offer?
                                     </button>
                                 </h2>
                                 <div id="collapseOne" class="accordion-collapse collapse show"
                                     aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
                                     <div class="accordion-body">
-                                        We offer a full range of digital marketing, development, and branding services
-                                        to
-                                        help grow your business online.
+                                        Serenica provides appointment scheduling, patient record management, billing &
+                                        invoicing, telehealth, analytics, and more—all designed for mental health
+                                        clinics.
                                     </div>
                                 </div>
                             </div>
@@ -1305,14 +1321,14 @@
                                 <h2 class="accordion-header" id="headingTwo">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        How can I get started?
+                                        How do I get started with Serenica?
                                     </button>
                                 </h2>
                                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                                     data-bs-parent="#faqAccordion">
                                     <div class="accordion-body">
-                                        Simply reach out through our contact form or call us directly. We'll guide you
-                                        through every step.
+                                        Simply contact us via our demo request form or phone. Our team will guide you
+                                        through setup and onboarding tailored to your clinic’s needs.
                                     </div>
                                 </div>
                             </div>
@@ -1323,15 +1339,14 @@
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseThree" aria-expanded="false"
                                         aria-controls="collapseThree">
-                                        Do you work with international clients?
+                                        Is Serenica compliant with UK data protection laws?
                                     </button>
                                 </h2>
                                 <div id="collapseThree" class="accordion-collapse collapse"
                                     aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
                                     <div class="accordion-body">
-                                        Yes, we proudly work with clients from around the globe to deliver top-tier
-                                        digital
-                                        solutions.
+                                        Yes, Serenica is fully GDPR compliant and employs industry-standard encryption
+                                        and security protocols to safeguard patient data.
                                     </div>
                                 </div>
                             </div>
@@ -1342,15 +1357,14 @@
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseFour" aria-expanded="false"
                                         aria-controls="collapseFour">
-                                        What is your pricing structure?
+                                        What pricing plans do you offer?
                                     </button>
                                 </h2>
                                 <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
                                     data-bs-parent="#faqAccordion">
                                     <div class="accordion-body">
-                                        Our pricing depends on your specific needs and goals. We provide custom quotes
-                                        after
-                                        a free consultation.
+                                        We offer tiered subscription plans tailored to different clinic sizes and needs.
+                                        Contact us for a personalized quote.
                                     </div>
                                 </div>
                             </div>
@@ -1361,14 +1375,14 @@
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseFive" aria-expanded="false"
                                         aria-controls="collapseFive">
-                                        How long does a project usually take?
+                                        How long does implementation take?
                                     </button>
                                 </h2>
                                 <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
                                     data-bs-parent="#faqAccordion">
                                     <div class="accordion-body">
-                                        Project duration depends on scope, but we strive to deliver efficiently without
-                                        compromising quality.
+                                        Implementation timelines vary based on your clinic’s size and customization
+                                        needs. We aim for a smooth, efficient onboarding process with dedicated support.
                                     </div>
                                 </div>
                             </div>
@@ -1379,12 +1393,13 @@
             </div>
         </section>
 
+        <!--News Letter section -->
         <section class="newsletter-section">
             <div class="bg-image"></div>
             <div class="overlay"></div>
 
             <div class="newsletter-content">
-                <h2 class="newsletter-title">Stay Connect</h2>
+                <h2 class="newsletter-title">Stay Connected</h2>
                 <p class="newsletter-text">
                     By subscribing to our newsletter, you can be informed about special offers, current news and events.
                     We are
@@ -1398,7 +1413,7 @@
                 </form>
             </div>
         </section>
-
+        <!--Fotter Section-->
         <footer class="fottersection-wrapper">
             <div class="fottersection-container container py-5">
                 <div class="fottersection-row row gy-4">
@@ -1408,9 +1423,9 @@
                         <div class="fottersection-widget">
                             <h4 class="fottersection-widget-title">Company</h4>
                             <ul class="fottersection-links">
-                                <li><a href="#">About</a></li>
-                                <li><a href="#">Service</a></li>
-                                <li><a href="#">Contact Us</a></li>
+                                <li><a href="/about.html">About</a></li>
+                                <li><a href="#services">Services</a></li>
+                                <li><a href="#contact">Contact Us</a></li>
                             </ul>
                         </div>
                     </div>
@@ -1434,9 +1449,11 @@
                             <ul class="fottersection-links fottersection-social-links">
                                 <li><a href="https://www.facebook.com/share/15eJWJ8BC5/"><i
                                             class="fab fa-facebook-f"></i> Facebook</a></li>
-                                <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
-                                <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
-                                <li><a href="#"><i class="fab fa-linkedin-in"></i> LinkedIn</a></li>
+                                <li><a href="https://www.instagram.com/qanzakglobal/"><i class="fab fa-instagram"></i>
+                                        Instagram</a></li>
+
+                                <li><a href="https://www.linkedin.com/in/m-serene-qanzakglobal"><i
+                                            class="fab fa-linkedin-in"></i> LinkedIn</a></li>
                             </ul>
                         </div>
                     </div>
@@ -1455,10 +1472,6 @@
             </div>
         </footer>
 
-
-
-        <!-- Bootstrap JS Bundle with Popper -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Custom JS -->
         <script src="script.js"></script>
     </section>

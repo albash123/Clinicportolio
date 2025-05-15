@@ -38,11 +38,11 @@ html::-webkit-scrollbar {
 
 .typing-text {
   display: inline-block;
-  border-right: 2px solid #000;
+
   white-space: nowrap;
   overflow: hidden;
   width: 0;
-  animation: typing 4s steps(25, end) forwards, blink 0.7s step-end infinite;
+  animation: typing 2s steps(25, end) forwards, blink 0.9s step-end infinite;
 }
 
 @keyframes typing {
@@ -2119,6 +2119,7 @@ body {
 
 .pricingsection-feature-list {
   list-style: none;
+  text-align: start !important;
   padding: 0;
   margin-bottom: 30px;
 }
@@ -3033,7 +3034,7 @@ body {
 /* optional fancy gradient fill */
 @media (prefers-color-scheme: dark) {
   .hero-title {
-    background: linear-gradient(90deg, #11c8e4, #056472, #323131);
+    background: linear-gradient(90deg, #11c8e4, #329eaf, #323131);
     -webkit-background-clip: text;
     color: transparent;
   }
@@ -3295,9 +3296,23 @@ p {
   transform: scale(1.05);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
-
 .Features_view {
-  background-color: #a7d7c5;
+  background: linear-gradient(270deg, #d4e8e2, #0be192, #c3e2db, #a7d7c5);
+  background-size: 800% 800%;
+  animation: gradientMove 20s ease infinite;
+}
+
+/* Animation keyframes for smooth gradient movement */
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 /* Ensure content is readable on all devices */
@@ -3342,7 +3357,7 @@ p {
 /* Extra small screens (up to 575.98px) */
 @media (max-width: 575.98px) {
   .transt_contatiner {
-    height: 800px !important;
+    height: 600px !important;
     font-size: 0.95rem !important;
   }
 }
@@ -4066,4 +4081,40 @@ p {
   100% {
     background-position: 0% 50%;
   }
+}
+.pricingsection-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.pricingsection-card .card-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.pricingsection-card .btn {
+  margin-top: auto; /* Push button to bottom */
+  width: 100%; /* Full width */
+}
+ul {
+  list-style: none; /* Remove default bullets */
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  display: flex; /* Use flexbox for icon + text alignment */
+  align-items: center;
+  margin-bottom: 0.6rem;
+  font-size: 1rem;
+  color: #333;
+}
+
+ul li i {
+  color: #2ca8a1; /* Icon color */
+  margin-right: 0.8rem; /* Space between icon and text */
+  min-width: 20px; /* Ensure icons align vertically */
+  font-size: 1.2rem;
 }
