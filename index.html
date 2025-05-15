@@ -8,28 +8,21 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
-
-    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <!-- SplitType (lightweight text splitter) -->
     <script src="https://cdn.jsdelivr.net/npm/split-type@0.3.3"></script>
 
 
 </head>
-<!-- AOS Script -->
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script>
-    AOS.init({
-        once: true, // animation only once per element
-        duration: 800,
-        easing: 'ease-in-out',
-    });
-</script>
+
+
 <!-- Preloader Script -->
 <script>
     window.addEventListener("load", () => {
@@ -206,8 +199,7 @@
                     <div class="col-lg-6" data-aos="fade-right">
                         <h1 class="hero-title">Management Made Simple, Results Made Predictable</h1>
                         <!-- GSAP core + ScrollTrigger -->
-                        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
-                        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
+
 
                         <p class="hero-text" data-aos="fade-up" data-aos-delay="400">
                             Traditional clinic management is time-consuming and error-prone. We believe mental health
@@ -370,7 +362,7 @@
         </section>
 
 
-
+        <!--Our values section-->
         <section class="values-section">
             <div class="container">
                 <h1 class="values-title">OUR VALUES</h1>
@@ -1046,7 +1038,7 @@
 
         <!--Contact section-->
 
-        <section class="contact-section py-5" data-aos="fade-up" id='contact'>
+        <section class="contact-section py-5" id='contact'>
             <div class=" container py-4">
                 <div class="row text-center mb-5" data-aos="zoom-in">
                     <div class="col-lg-8 mx-auto">
@@ -1096,7 +1088,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-7" data-aos="fade-left">
+                    <div class="col-lg-7">
                         <div class="contact-form-container">
                             <form id="contactForm">
                                 <h3 class="contact-form-heading mb-4">Get in touch</h3>
@@ -1277,13 +1269,12 @@
             </div>
         </section>
 
-        <footer class="fottersection-wrapper" data-aos="fade-up">
+        <footer class="fottersection-wrapper">
             <div class="fottersection-container container py-5">
                 <div class="fottersection-row row gy-4">
 
                     <!-- Company Links -->
-                    <div class="fottersection-col col-lg-3 col-md-6 offset-lg-1" data-aos="fade-up"
-                        data-aos-delay="200">
+                    <div class="fottersection-col col-lg-3 col-md-6 offset-lg-1" data-aos-delay="200">
                         <div class="fottersection-widget">
                             <h4 class="fottersection-widget-title">Company</h4>
                             <ul class="fottersection-links">
@@ -1295,7 +1286,7 @@
                     </div>
 
                     <!-- Utility Pages -->
-                    <div class="fottersection-col col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="fottersection-col col-lg-3 col-md-6" data-aos-delay="300">
                         <div class="fottersection-widget">
                             <h4 class="fottersection-widget-title">Utility Pages</h4>
                             <ul class="fottersection-links">
@@ -1307,8 +1298,7 @@
                     </div>
 
                     <!-- Social Media -->
-                    <div class="fottersection-col col-lg-3 col-md-6 offset-lg-1" data-aos="fade-up"
-                        data-aos-delay="400">
+                    <div class="fottersection-col col-lg-3 col-md-6 offset-lg-1" data-aos-delay="400">
                         <div class="fottersection-widget">
                             <h4 class="fottersection-widget-title">Follow Us</h4>
                             <ul class="fottersection-links fottersection-social-links">
@@ -1325,7 +1315,7 @@
             </div>
 
             <!-- Footer Bottom -->
-            <div class="fottersection-bottom text-center py-4" data-aos="fade-up" data-aos-delay="500">
+            <div class="fottersection-bottom text-center py-4" data-aos-delay="500">
                 <div class="fottersection-logo mb-2">
                     <img src="assets/df_prev_ui.png" class="logo_design" alt="Serenica Logo">
                 </div>
@@ -1342,12 +1332,10 @@
         <!-- Custom JS -->
         <script src="script.js"></script>
     </section>
+
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script>
-        AOS.init({
-            duration: 1000, // animation duration
-            once: true,     // whether animation should happen only once
-        });
+        AOS.init();
     </script>
 
 </body>
