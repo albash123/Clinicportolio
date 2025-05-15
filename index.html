@@ -6,6 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Serinica.clinic</title>
     <!-- Bootstrap CSS -->
+
+
+    <!-- Your HTML content here -->
+
+    <!-- Bootstrap JS Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
@@ -441,7 +449,7 @@
                 <!-- Services Content -->
                 <div class="row align-items-center">
                     <!-- Left Column - Images with Floating Elements -->
-                    <div class="col-lg-6 mb-5 mb-lg-0 position-relative" data-aos="zoom-in">
+                    <div class="col-lg-7 mb-5 mb-lg-0 position-relative" data-aos="zoom-in">
                         <!-- unchanged container/column structure -->
                         <div class="services-image-container overflow-hidden">
                             <video id="featureVideo" class="w-100 h-100" autoplay muted loop playsinline controls
@@ -481,13 +489,13 @@
                     </div>
 
                     <!-- Right Column - Services List -->
-                    <div class="col-lg-6">
-
+                    <div class="col-lg-5">
 
                         <div class="row g-4">
                             <!-- Service Item 1 -->
                             <div class="col-12" data-aos="fade-right" data-aos-delay="100">
-                                <div class="services-card position-relative">
+                                <div class="services-card position-relative" data-bs-toggle="modal"
+                                    data-bs-target="#modalAppointmentScheduling" style="cursor:pointer;">
                                     <div class="services-icon">
                                         <i class="fas fa-calendar-check"></i>
                                     </div>
@@ -504,72 +512,177 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <!-- Service Item 2 -->
-                        <div class="col-12" data-aos="fade-right" data-aos-delay="200">
-                            <div class="services-card position-relative">
-                                <div class="services-icon">
-                                    <i class="fas fa-folder-open"></i>
-                                </div>
-                                <div class="services-content">
-                                    <h3 class="services-title">Client Records Management</h3>
-                                    <p class="services-description">Securely store, access, and manage Client data in
-                                        one central system.</p>
-                                </div>
+                            <!-- Service Item 2 -->
+                            <div class="col-12" data-aos="fade-right" data-aos-delay="200">
+                                <div class="services-card position-relative" data-bs-toggle="modal"
+                                    data-bs-target="#modalClientRecords" style="cursor:pointer;">
+                                    <div class="services-icon">
+                                        <i class="fas fa-folder-open"></i>
+                                    </div>
+                                    <div class="services-content">
+                                        <h3 class="services-title">Client Records Management</h3>
+                                        <p class="services-description">Securely store, access, and manage Client data
+                                            in one central system.</p>
+                                    </div>
 
-                                <!-- Hover Overlay -->
-                                <div class="overlay-text">
-                                    Centralized records ensure fast access, data security, and better decision-making in
-                                    Client care.
+                                    <!-- Hover Overlay -->
+                                    <div class="overlay-text">
+                                        Centralized records ensure fast access, data security, and better
+                                        decision-making in Client care.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Service Item 3 -->
+                            <div class="col-12" data-aos="fade-right" data-aos-delay="300">
+                                <div class="services-card position-relative" data-bs-toggle="modal"
+                                    data-bs-target="#modalBillingInvoicing" style="cursor:pointer;">
+                                    <div class="services-icon">
+                                        <i class="fas fa-credit-card"></i>
+                                    </div>
+                                    <div class="services-content">
+                                        <h3 class="services-title">Billing & Invoicing</h3>
+                                        <p class="services-description">Generate invoices, process payments, and track
+                                            dues with ease.</p>
+                                    </div>
+
+                                    <!-- Hover Overlay -->
+                                    <div class="overlay-text">
+                                        Simplify financial operations with automated billing, real-time payment
+                                        tracking, and due reminders.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Service Item 4 -->
+                            <div class="col-12" data-aos="fade-right" data-aos-delay="400">
+                                <div class="services-card position-relative" data-bs-toggle="modal"
+                                    data-bs-target="#modalAnalyticsReporting" style="cursor:pointer;">
+                                    <div class="services-icon">
+                                        <i class="fas fa-chart-bar"></i>
+                                    </div>
+                                    <div class="services-content">
+                                        <h3 class="services-title">Analytics & Reporting</h3>
+                                        <p class="services-description">Get insights on appointments, revenue, Client
+                                            retention, and more.</p>
+                                    </div>
+
+                                    <!-- Hover Overlay -->
+                                    <div class="overlay-text">
+                                        Make data-driven decisions using detailed reports on clinic performance, trends,
+                                        and Client behavior.
+                                    </div>
                                 </div>
                             </div>
                         </div>
-
-
-
-                        <!-- Service Item 3 -->
-                        <div class="col-12" data-aos="fade-right" data-aos-delay="300">
-                            <div class="services-card position-relative">
-                                <div class="services-icon">
-                                    <i class="fas fa-credit-card"></i>
-                                </div>
-                                <div class="services-content">
-                                    <h3 class="services-title">Billing & Invoicing</h3>
-                                    <p class="services-description">Generate invoices, process payments, and track dues
-                                        with ease.</p>
-                                </div>
-
-                                <!-- Hover Overlay -->
-                                <div class="overlay-text">
-                                    Simplify financial operations with automated billing, real-time payment tracking,
-                                    and due reminders.
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Service Item 4 -->
-                        <div class="col-12" data-aos="fade-right" data-aos-delay="400">
-                            <div class="services-card position-relative">
-                                <div class="services-icon">
-                                    <i class="fas fa-chart-bar"></i>
-                                </div>
-                                <div class="services-content">
-                                    <h3 class="services-title">Analytics & Reporting</h3>
-                                    <p class="services-description">Get insights on appointments, revenue, Client
-                                        retention, and more.</p>
-                                </div>
-
-                                <!-- Hover Overlay -->
-                                <div class="overlay-text">
-                                    Make data-driven decisions using detailed reports on clinic performance, trends, and
-                                    Client behavior.
-                                </div>
-                            </div>
-                        </div>
-
-
                     </div>
+
+                    <!-- Modals -->
+
+                    <!-- Modal 1: Appointment Scheduling -->
+                    <div class="modal fade" id="modalAppointmentScheduling" tabindex="-1"
+                        aria-labelledby="modalAppointmentSchedulingLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="modalAppointmentSchedulingLabel">Appointment Scheduling
+                                    </h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Streamline your bookings with smart scheduling and automatic reminders. Our
+                                        system helps minimize no-shows and boosts clinic efficiency by automating the
+                                        entire booking process. You can customize appointment types, set availability,
+                                        and send automatic notifications to clients.</p>
+                                    <ul>
+                                        <li>Customizable appointment slots</li>
+                                        <li> email & SMS reminders</li>
+
+                                        <li>Easy rescheduling and cancellations</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal 2: Client Records Management -->
+                    <div class="modal fade" id="modalClientRecords" tabindex="-1"
+                        aria-labelledby="modalClientRecordsLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="modalClientRecordsLabel">Client Records Management</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Securely store, access, and manage client data all in one centralized system. Our
+                                        platform ensures fast retrieval, high data security, and compliance with health
+                                        data regulations.</p>
+                                    <ul>
+                                        <li>Encrypted data storage</li>
+                                        <li>Role-based access control</li>
+
+                                        <li>Easy client history overview</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal 3: Billing & Invoicing -->
+                    <div class="modal fade" id="modalBillingInvoicing" tabindex="-1"
+                        aria-labelledby="modalBillingInvoicingLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="modalBillingInvoicingLabel">Billing & Invoicing</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Generate invoices, process payments, and track dues effortlessly. Our billing
+                                        module automates financial operations to save time and reduce errors.</p>
+                                    <ul>
+                                        <li>invoice generation</li>
+                                        <li>Multiple payment gateway integration</li>
+                                        <li>Payment status tracking</li>
+                                        <li>Due payment reminders</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal 4: Analytics & Reporting -->
+                    <div class="modal fade" id="modalAnalyticsReporting" tabindex="-1"
+                        aria-labelledby="modalAnalyticsReportingLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="modalAnalyticsReportingLabel">Analytics & Reporting</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Gain insights on appointments, revenue, client retention, and more with detailed
+                                        analytics and reports. Use data to improve clinic performance and patient care.
+                                    </p>
+                                    <ul>
+                                        <li>Customizable reports</li>
+                                        <li>Visual dashboards</li>
+
+                                        <li>Export data in multiple formats</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
                 </div>
 
             </div>
@@ -655,13 +768,13 @@
                         <div class="row g-4">
                             <!-- Telehealth & Messaging -->
                             <div class="col-md-6">
-                                <div class="business-feature-card">
-                                    <div class="business-icon-wrapper business-light-blue">
+                                <div class="magic-business-feature-card magic-business-light-blue">
+                                    <div class="magic-business-icon-wrapper">
                                         <i class="fas fa-robot"></i>
                                     </div>
-                                    <h3 class="business-feature-title">Health Bot</h3>
-                                    <div class="feature-tooltip w-100">
-                                        <ul class="feature-tooltip-list">
+                                    <h3 class="magic-business-feature-title">Health Bot</h3>
+                                    <div class="magic-feature-details">
+                                        <ul>
                                             <li>Secure video consultations let clinicians connect with clients from
                                                 anywhere, eliminating travel barriers.</li>
                                             <li>End-to-end encrypted WebRTC ensures every call is private and
@@ -672,69 +785,62 @@
                                                 link each call to the client record.</li>
                                         </ul>
                                     </div>
-
                                 </div>
                             </div>
 
                             <!-- Automated Workflows -->
                             <div class="col-md-6">
-                                <div class="business-feature-card">
-                                    <div class="business-icon-wrapper business-light-purple">
+                                <div class="magic-business-feature-card magic-business-light-purple">
+                                    <div class="magic-business-icon-wrapper">
                                         <i class="fas fa-users-cog"></i>
                                     </div>
-                                    <h3 class="business-feature-title">Automated Workflows</h3>
-                                    <div class="feature-tooltip w-100">
-                                        <ul class="feature-tooltip-list">
+                                    <h3 class="magic-business-feature-title">Automated Workflows</h3>
+                                    <div class="magic-feature-details">
+                                        <ul>
                                             <li>Auto-assign tasks &amp; reminders in one click</li>
                                             <li>Auto-generate billing events at each milestone</li>
                                             <li>Modify workflows instantly—no coding needed</li>
-                                            <li>Modify workflow rules, approval chains, and notification<br> settings
+                                            <li>Modify workflow rules, approval chains, and notification settings
                                                 on-the-fly without any coding.</li>
                                         </ul>
                                     </div>
-
-
                                 </div>
                             </div>
 
                             <!-- Data Security & Compliance -->
                             <div class="col-md-6">
-                                <div class="business-feature-card">
-                                    <div class="business-icon-wrapper business-light-indigo">
+                                <div class="magic-business-feature-card magic-business-light-indigo">
+                                    <div class="magic-business-icon-wrapper">
                                         <i class="fas fa-chart-bar"></i>
                                     </div>
-                                    <h3 class="business-feature-title">Data Security &amp; Compliance</h3>
-                                    <div class="feature-tooltip">
-                                        <div class="feature-tooltip w-100">
-                                            <ul class="feature-tooltip-list">
-                                                <li>AES-256 encryption of data at rest</li>
-                                                <li>Comprehensive audit logs for all actions</li>
-                                                <li>Role-based access controls to limit permissions</li>
-                                            </ul>
-                                        </div>
-
+                                    <h3 class="magic-business-feature-title">Data Security &amp; Compliance</h3>
+                                    <div class="magic-feature-details">
+                                        <ul>
+                                            <li>AES-256 encryption of data at rest</li>
+                                            <li>Comprehensive audit logs for all actions</li>
+                                            <li>Role-based access controls to limit permissions</li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- 24/7 Support & Updates -->
                             <div class="col-md-6">
-                                <div class="business-feature-card">
-                                    <div class="business-icon-wrapper business-light-yellow">
+                                <div class="magic-business-feature-card magic-business-light-yellow">
+                                    <div class="magic-business-icon-wrapper">
                                         <i class="fas fa-link"></i>
                                     </div>
-                                    <h3 class="business-feature-title">24/7 Support &amp; Updates</h3>
-                                    <div class="feature-tooltip">
-                                        <div class="feature-tooltip w-100 ">
-                                            <ul class="feature-tooltip-list">
-                                                <li>24/7 support via chat, email &amp; phone</li>
-                                                <li>Continuous feature releases driven by your feedback</li>
-                                            </ul>
-                                        </div>
-
+                                    <h3 class="magic-business-feature-title">24/7 Support &amp; Updates</h3>
+                                    <div class="magic-feature-details">
+                                        <ul>
+                                            <li>24/7 support via chat, email &amp; phone</li>
+                                            <li>Continuous feature releases driven by your feedback</li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
+
+
                         </div>
 
                     </div>
@@ -743,6 +849,30 @@
                 </div>
             </div>
         </section>
+
+
+
+        <script>
+            const magicCards = document.querySelectorAll('.magic-business-feature-card');
+
+            magicCards.forEach(card => {
+                card.addEventListener('mouseenter', () => {
+                    // Collapse all
+                    magicCards.forEach(c => {
+                        c.querySelector('.magic-feature-details').classList.remove('expanded');
+                    });
+                    // Expand hovered
+                    card.querySelector('.magic-feature-details').classList.add('expanded');
+                });
+
+                card.addEventListener('mouseleave', () => {
+                    // Collapse all on leave
+                    magicCards.forEach(c => {
+                        c.querySelector('.magic-feature-details').classList.remove('expanded');
+                    });
+                });
+            });
+        </script>
 
         <section class="pricingsection-section py-5" data-aos="fade-up" id="pricing">
             <div class="container py-4">

@@ -465,6 +465,7 @@ h1.display-3 {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25); /* Increased shadow */
   border-radius: 1rem;
   overflow: hidden;
+  height: 500px;
 }
 
 /* Rocket icon */
@@ -713,16 +714,16 @@ h1.display-3 {
 }
 
 .services-title {
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 600;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   color: #222;
 }
 
 .services-description {
   color: #666;
   margin-bottom: 0;
-  line-height: 1.6;
+  line-height: 0.9;
 }
 
 /* Responsive adjustments */
@@ -3858,5 +3859,211 @@ p {
 
   .newsletter-section {
     min-height: 500px;
+  }
+}
+.modal-body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333333;
+  padding: 1.5rem 2rem;
+  background-color: #f9f9f9;
+  border-radius: 0 0 0.375rem 0.375rem; /* Rounded corners at the bottom */
+}
+
+.modal-body p {
+  margin-bottom: 1rem;
+}
+
+.modal-body ul {
+  padding-left: 1.25rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #555555;
+}
+
+.modal-body ul li {
+  margin-bottom: 0.5rem;
+}
+.magic-business-feature-card {
+  position: relative; /* needed for absolute child */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  background: white;
+
+  height: 120px; /* fixed height */
+  overflow: visible; /* allow overlay */
+  transition: box-shadow 0.3s ease;
+}
+.magic-business-feature-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+.magic-business-icon-wrapper {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+.magic-business-feature-title {
+  margin-bottom: 0;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #706767;
+}
+
+/* Overlay detail panel */
+.magic-feature-details {
+  position: absolute;
+  top: 100%; /* right below the card */
+  left: 0;
+  color: #193bc3 !important;
+  right: 0;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  padding: 15px 20px;
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 10;
+}
+
+/* Show overlay on hover */
+.magic-business-feature-card:hover .magic-feature-details {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+/* Optional: limit max height and scroll if content too tall */
+.magic-feature-details ul {
+  margin: 0;
+  padding-left: 20px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+/* Prevent overlay from being clipped inside container if needed */
+.col-md-6 {
+  position: relative; /* ensure relative context if nested */
+}
+@keyframes magic-icon-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.magic-business-icon-wrapper i {
+  animation: magic-icon-bounce 3s ease-in-out infinite;
+  display: inline-block; /* ensure transform works properly */
+}
+
+@keyframes magic-icon-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.magic-business-icon-wrapper i {
+  animation: magic-icon-bounce 3s ease-in-out infinite;
+  display: inline-block;
+}
+.magic-business-icon-wrapper i {
+  animation: magic-icon-bounce 3s ease-in-out infinite;
+  display: inline-block;
+  color: #0d6efd; /* bright blue as example */
+  filter: drop-shadow(0 0 3px #0d6efd88);
+  transition: color 0.3s ease, filter 0.3s ease;
+}
+
+/* Different colors per theme (optional) */
+.magic-business-light-blue .magic-business-icon-wrapper i {
+  color: #0d6efd;
+  filter: drop-shadow(0 0 2px #0d6efdaa);
+}
+.magic-business-light-purple .magic-business-icon-wrapper i {
+  color: #6f42c1;
+  filter: drop-shadow(0 0 2px #6f42c1aa);
+}
+.magic-business-light-indigo .magic-business-icon-wrapper i {
+  color: #6610f2;
+  filter: drop-shadow(0 0 2px #6610f2aa);
+}
+.magic-business-light-yellow .magic-business-icon-wrapper i {
+  color: #ffc107;
+  filter: drop-shadow(0 0 2px #ffc107aa);
+}
+.magic-business-feature-card {
+  position: relative;
+  border-radius: 8px;
+  padding: 20px;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  background: white;
+  height: 120px;
+  overflow: visible;
+  box-shadow: none;
+  transition: box-shadow 0.3s ease;
+  border: 3px solid transparent; /* base border width */
+  background-clip: padding-box;
+}
+
+.magic-business-feature-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Create animated gradient border with a pseudo element */
+.magic-business-feature-card::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  bottom: -3px;
+  left: -3px;
+  right: -3px;
+  border-radius: 11px; /* border-radius + border width */
+  padding: 3px;
+  background: linear-gradient(270deg, #a0c4ff, #bdb2ff, #9d4edd, #ffc8dd);
+  background-size: 600% 600%;
+  z-index: -1;
+  animation: magic-border-move 8s ease infinite;
+}
+
+/* Base colors for each variant */
+.magic-business-light-blue::before {
+  background: linear-gradient(270deg, #b0d7ff, #8ec5fc, #a0c4ff, #4da8da);
+}
+.magic-business-light-purple::before {
+  background: linear-gradient(270deg, #d3bcff, #bdb2ff, #9d4edd, #c084fc);
+}
+.magic-business-light-indigo::before {
+  background: linear-gradient(270deg, #b1a7ff, #805ad5, #6610f2, #7f5af0);
+}
+.magic-business-light-yellow::before {
+  background: linear-gradient(270deg, #fff3b0, #ffe066, #ffcc00, #ffea85);
+}
+
+@keyframes magic-border-move {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
