@@ -15,6 +15,7 @@ body {
   overflow-y: auto;
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none;
+  font-family: "Roboto", sans-serif !important;
 }
 
 body::-webkit-scrollbar,
@@ -546,8 +547,10 @@ h1.display-3 {
   letter-spacing: 1.5px;
   padding-bottom: 10px;
   margin-bottom: 30px;
-  font-weight: 800;
-  cursor: pointer;
+  font-weight: 600;
+
+  text-align: center;
+  font-size: 3.5rem;
 }
 .services-section {
   background-color: #fafafa !important;
@@ -653,23 +656,6 @@ h1.display-3 {
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-}
-
-/* Decorative underline */
-.our-services-heading::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 60px;
-  height: 4px;
-
-  border-radius: 2px;
-}
-
-/* Optional glowing shadow effect */
-.our-services-heading:hover {
-  text-shadow: 0 2px 10px rgba(13, 110, 253, 0.3);
 }
 
 /* Service cards */
@@ -2350,12 +2336,12 @@ body {
 }
 
 .contact-btn-submit {
-  background-color: #f8e5e5;
+  background-color: #ffffff;
   color: black;
   font-weight: 500;
   padding: 12px 30px;
   border-radius: 50px;
-  border: none;
+  border:  1px solid #000000;
   transition: all 0.3s ease;
 }
 
@@ -2665,8 +2651,8 @@ body {
 }
 
 .fottersection-submit-btn {
-  background-color: #f8e5e5;
-  color: black;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
   border: none;
   padding: 0.75rem 1.5rem;
   font-weight: 500;
@@ -4112,9 +4098,129 @@ ul li {
   color: #333;
 }
 
-ul li i {
-  color: #2ca8a1; /* Icon color */
-  margin-right: 0.8rem; /* Space between icon and text */
-  min-width: 20px; /* Ensure icons align vertically */
-  font-size: 1.2rem;
+.features-section {
+  background: #f8f9fa;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.features-section .container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* Each feature card */
+.feature-card {
+  display: flex;
+  align-items: center;
+  max-width: 600px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+}
+
+/* Icon container */
+.feature-icon {
+  min-width: 70px;
+  min-height: 70px;
+  background: #71d2ae;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  box-shadow: 0 3px 8px rgb(0 123 255 / 0.4);
+  transition: background 0.3s ease;
+}
+
+.feature-icon svg {
+  width: 32px;
+  height: 32px;
+}
+
+.feature-card:hover .feature-icon {
+  background: #050c15;
+}
+
+/* Content */
+.feature-content h2 {
+  margin: 0 0 14px 0;
+  font-size: 1rem;
+  color: #222;
+}
+
+.feature-content ul {
+  margin: 0;
+  padding-left: 2px;
+  list-style-type: disc;
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 720px) {
+  .feature-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .feature-icon {
+    margin-bottom: 15px;
+  }
+}
+.feature-row {
+  display: flex;
+  gap: 30px; /* space between cards */
+  padding-inline: 30px; /* optional: space around the entire row */
+  margin-bottom: 20px;
+  justify-content: center; /* or space-between, or center */
+  flex-wrap: wrap;
+
+  /* Animated colorful background */
+}
+
+/* Make cards share space evenly */
+.feature-row .feature-card {
+  flex: 1;
+}
+
+/* Responsive: stack vertically on smaller screens */
+@media (max-width: 720px) {
+  .feature-row {
+    flex-direction: column;
+  }
+}
+.feature-heading {
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 3rem;
+  color: #a7d7c5;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  user-select: none;
+}
+.vision-image {
+  width: 100%;
+  max-width: 1000px; /* or any size you prefer */
+  margin: auto;
+  overflow: hidden;
+  border-radius: 10px; /* optional rounded corners */
+}
+
+.vision-image video {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* ensures the video covers the area */
+  display: block;
+  border-radius: 10px;
 }
