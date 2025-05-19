@@ -92,15 +92,40 @@
     </div>
     <header class="landingpage ">
         <!-- Background Video -->
+
         <div class="video-background-wrapper position-absolute w-100 h-100 top-0 start-0 overflow-hidden z-n1">
-            <video autoplay muted loop playsinline class="w-100 h-100 object-fit-cover">
-                <source src="assets/therapy.mp4" type="video/mp4">
+            <video id="backgroundVideo" autoplay muted playsinline class="w-100 h-100 object-fit-cover">
+                <source id="videoSource" src="assets/therapy.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
+
             <!-- Optional overlay for better contrast -->
             <div class="video-overlay position-absolute top-0 start-0 w-100 h-100"
                 style="background: rgba(0, 0, 0, 0.4);"></div>
         </div>
+        <!-- 
+        <script>
+            const videoList = [
+                "assets/sucess.mp4",
+                "assets/video_doc.mp4",
+                "assets/video3.mp4"
+            ];
+
+            let currentIndex = 0;
+            const video = document.getElementById("backgroundVideo");
+            const source = document.getElementById("videoSource");
+
+            function changeVideo() {
+                currentIndex = (currentIndex + 1) % videoList.length;
+                source.src = videoList[currentIndex];
+                video.load();
+                video.play().catch((e) => console.error("Autoplay issue:", e));
+            }
+
+            // Change every 10 seconds
+            setInterval(changeVideo, 1000);
+        </script> -->
+
 
 
         <!-- Navbar -->
@@ -124,10 +149,8 @@
                             </a>
                         </li>
                         <li class="nav-item mx-1" data-aos="zoom-in" data-aos-delay="200">
-                            <a class="nav-link rounded-pill px-4" href="#services">Services</a>
+                            <a class="nav-link rounded-pill px-4" href="#services">Service</a>
                         </li>
-
-
 
                         <li class="nav-item mx-1" data-aos="zoom-in" data-aos-delay="400">
                             <a class="nav-link rounded-pill px-4" href="#pricing">Pricing</a>
@@ -245,6 +268,7 @@
                     </div>
                     <div class="col-lg-6" data-aos="fade-left">
                         <div class="hero-image">
+
                             <video class="img-fluid" autoplay muted loop playsinline data-aos="zoom-in-up"
                                 data-aos-delay="300">
                                 <source src="/assets/video_doc.mp4" type="video/mp4">
@@ -253,17 +277,7 @@
 
 
 
-                            <div class="profile-bubbles">
-                                <div class="profile-bubble" data-aos="fade-in" data-aos-delay="500"
-                                    style="background-image: url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-O73mOwX6ouHzx6HZVQWG8kQynxQbP5.png');">
-                                </div>
-                                <div class="profile-bubble" data-aos="fade-in" data-aos-delay="600"
-                                    style="background-image: url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-O73mOwX6ouHzx6HZVQWG8kQynxQbP5.png');">
-                                </div>
-                                <div class="profile-bubble" data-aos="fade-in" data-aos-delay="700"
-                                    style="background-image: url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-O73mOwX6ouHzx6HZVQWG8kQynxQbP5.png');">
-                                </div>
-                            </div>
+
                             <div class="arrow-circle" data-aos="fade-up" data-aos-delay="800">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                     stroke="currentColor">
